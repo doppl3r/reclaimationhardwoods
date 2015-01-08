@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>Restoration Hardwoods</title>
+	<meta name="description" content="Peter Thomas Designs">
+	<meta name="author" content="jacob debenedetto">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/stylesheet.css">
+	<link rel="stylesheet" href="css/wood.css">
+	<link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico' />
+	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	<div class="main-body">
+		<!--top navigation-->
+		<div class="nav fade-effect bottom-nav">
+			<div class="wrapper">
+				<div class="left">
+					<img onclick="setScrollTop(0);" src="img/logo.png" class="logo"/>
+					<img onclick="setScrollTop(0);" src="img/logo-small.png" class="logo-small"/>
+				</div>
+				<div class="right">
+					<img class="button fade-effect" src="img/nav-button.png"/>
+					<ul class="fade-effect">
+						<a>
+							<li class="fade-effect navi">COLORS
+								<ul class="fade-effect">
+									<div>
+										<li class="fade-effect"><img src="img/thumbnails/010101.jpg"/></li>
+										<li class="fade-effect"><img src="img/thumbnails/020101.jpg"/></li>
+										<li class="fade-effect"><img src="img/thumbnails/030101.jpg"/></li>
+										<li class="fade-effect"><img src="img/thumbnails/040101.jpg"/></li>
+										<li class="fade-effect"><img src="img/thumbnails/050101.jpg"/></li>
+										<li class="fade-effect"><img src="img/thumbnails/060101.jpg"/></li>
+										<li class="fade-effect"><img src="img/thumbnails/070101.jpg"/></li>
+										<li class="fade-effect"><img src="img/thumbnails/080101.jpg"/></li>
+									</div>
+								</ul>
+							</li>
+						</a>
+						<a>
+							<li class="fade-effect navi">PATTERNS
+								<ul class="fade-effect">
+									<div>
+										<li><img src="img/thumbnails/normal.jpg"/></li>
+										<li><img src="img/thumbnails/herringbone.jpg"/></li>
+										<li><img src="img/thumbnails/chevron.jpg"/></li>
+									</div>
+								</ul>
+							</li>	
+						</a>
+						<a href="wood.html"><li>THE WOOD</li></a>
+						<a href="why-us.html"><li>WHY US</li></a>
+						<a class="popup-youtube" href="https://www.youtube.com/watch?v=v67savG66tE"><li><img src="img/shopping-cart.png"/></li></a>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<!--Top-->
+		<div class="header fade-effect" style="background-image: url('img/bg3.jpg');">
+			<div class="wrapper">
+				<img src="img/acorn.png"/>
+				<h1>EUROPEAN OAK</h1>
+				<p>We chose the perfect species to capture the elegant look that has graced the great interior spaces of Europe along with the resilience that helped these floors survive centuries of wear. Characterized by a creamy white complexion, this extremely hard species derives its name from the Latin word for strength.  It grows slowly in France, Germany and in the other colder regions of Europe to yield a tight, straight, grain. Unlike domestic oak, European Oak logs are cut in a unique way to yield planks with dominant straight grain a subtle and refined center cathedral grain.</p>
+			</div>
+		</div>
+		
+		<!--footer-->
+		<div class="footer">
+			<div class="wrapper">
+				<span style="float: left; color: #999999;">Copyright Restoration Hardwoods. All Rights Reserved.</span>
+			</div>
+		</div>
+	</div>
+	
+	<!--Scripts-->
+	<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/magnific-popup.js"></script>
+	<script type="text/javascript">
+		
+		$(document).ready(function() {
+			$( window ).scroll(function() {	checkAnimations(); });
+			function checkAnimations() {
+				if ($(window).scrollTop() <= 0){$( ".bottom-nav" ).css( "top", "10%" );	$('.header').css("height",$(window).height());}
+				else{	$( ".bottom-nav" ).css( "top", "0%" );}
+			}
+			//change the screenheight after scrolling to the top (desktop feature)
+			function setScrollTop(y){ $('body').scrollTop(y); checkAnimations(); }
+			
+			$('.carousel').carousel({interval: false});
+			//alter h3 color after clicked
+			$('#carousel1').on('slid.bs.carousel', function() {
+				var index = $('#carousel1 .active').index();
+				$( "#section2 .subnav h3" ).css("color","#7D6A50");
+				$( "#section2 .subnav h3:nth-child("+(((index+2)))+")").css("color","#4e381a");
+			});
+			$('#carousel2').on('slid.bs.carousel', function() {
+				var index = $('#carousel2 .active').index();
+				$( "#section3 .subnav h3" ).css("color","#7D6A50");
+				$( "#section3 .subnav h3:nth-child("+(((index+2)))+")").css("color","#4e381a");
+			});
+			
+			//change background height to device height
+			$('.header').css("minHeight",$(window).height());
+		});
+		//change to a slide when called
+		function goToSlide(number,id) {
+			$("#carousel"+id).carousel(number);
+		}
+	</script>
+</body>
+</html>
