@@ -73,7 +73,6 @@
 							<div class="item">
 								<div class="top">
 									<div>
-										<img src="./rh/img/number-one.png"/>
 										<h3>SELECT A COLOR</h3>
 									</div>
 								</div>
@@ -89,16 +88,16 @@
 								</div>
 								<div class="bottom">
 									<img class="left-arrow" src="./rh/img/left-arrow.png" style="opacity: 0.25;"/>
-									<a href="#" class="fade-effect"><h2>BUY</h2></a>
+									<a href="#" class="fade-effect"><h2></h2></a>
 									<a href="#" onclick="nextMenu()" class="fade-effect"><h2>NEXT</h2></a>
 									<img class="right-arrow" src="./rh/img/right-arrow.png" onclick="nextMenu()"/>
 								</div>
+								<a href="#" class="buy fade-effect">buy this floor</a>
 							</div>
 							
 							<div class="item">
 								<div class="top">
 									<div>
-										<img src="./rh/img/number-two.png"/>
 										<h3>SELECT A PATTERN</h3>
 									</div>
 								</div>
@@ -109,16 +108,16 @@
 								</div>
 								<div class="bottom">
 									<img class="left-arrow" src="./rh/img/left-arrow.png" onclick="prevMenu()"/>
-									<a href="#" class="fade-effect"><h2>BUY</h2></a>
+									<a href="#" class="fade-effect"><h2></h2></a>
 									<a href="#" onclick="nextMenu()" class="fade-effect"><h2>NEXT</h2></a>
 									<img class="right-arrow" src="./rh/img/right-arrow.png" onclick="nextMenu()"/>
 								</div>
+								<a href="#" class="buy fade-effect">buy this floor</a>
 							</div>
 							
 							<div class="item">
 								<div class="top">
 									<div>
-										<img src="./rh/img/number-three.png"/>
 										<h3>SELECT A ROOM</h3>
 									</div>
 								</div>
@@ -129,13 +128,15 @@
 								</div>
 								<div class="bottom">
 									<img class="left-arrow" src="./rh/img/left-arrow.png" onclick="prevMenu()"/>
-									<a href="#" class="fade-effect"><h2>BUY</h2></a>
+									<a href="#" class="fade-effect"><h2></h2></a>
 									<a href="#" class="fade-effect" onclick="nextMenu()"><h2>EDIT</h2></a>
 									<img class="right-arrow" src="./rh/img/right-arrow.png" style="opacity:0.25"/>
 								</div>
+								<a href="#" class="buy fade-effect">buy this floor</a>
 							</div>
 							
 						</div>
+						<img class="eye" src="./rh/img/i-icon.png"/>
 					</div>
 					<div class="left fade-effect">
 						<img class="toggle-button" src="./rh/img/exit.png"/>
@@ -182,7 +183,7 @@
 		$(document).ready(function() {
 			$( window ).scroll(function() {	checkAnimations(); });
 			function checkAnimations() {
-				if ($(window).scrollTop() <= 0){$( ".bottom-nav" ).css( "top", "10%" );	$('.header').css("height",$(window).height());}
+				if ($(window).scrollTop() <= 0){$( ".bottom-nav" ).css( "top", "32px" );	$('.header').css("height",$(window).height());}
 				else{	$( ".bottom-nav" ).css( "top", "0%" );}
 			}
 			//change the screenheight after scrolling to the top (desktop feature)
@@ -196,12 +197,19 @@
 				var newIndex = ("0"+index1).slice(-2)+("0"+index2).slice(-2)+("0"+index3).slice(-2);
 				$('.header').css('background-image','url(./rh/img/backgrounds/'+newIndex+'.jpg)');
 				//slide2.trigger("owl.next");
-				$('.header .left').fadeTo(500, 0, function(){ $('.header .left').css("display","none"); });
+				$('.header .left').fadeTo(500, 0, function(){ $('.header .left').css("opacity","0"); });
+				$('.header .right .eye').css("opacity","1");
 			}
 			
 			//toggle left section class
 			$('.header .left .toggle-button').click(function() {
-				$('.header .left').fadeTo(500, 0, function(){ $('.header .left').css("display","none"); });
+				$('.header .left').fadeTo(500, 0, function(){ $('.header .left').css("opacity","0"); });
+				$('.header .right .eye').fadeTo(500, 0, function(){ $('.header .right .eye').css("opacity","1"); });
+			});
+			//toggle left section class
+			$('.header .right .eye').click(function() {
+				$('.header .left').fadeTo(500, 0, function(){ $('.header .left').css("opacity","1"); });
+				$('.header .right .eye').fadeTo(500, 0, function(){ $('.header .right .eye').css("opacity","0"); });
 			});
 			
 			//change background height to device height
