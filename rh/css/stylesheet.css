@@ -48,8 +48,9 @@ em { color: #FFF; }
 .cont { height: 100%; }
 .header { min-height: 320px; background: url('') no-repeat center center; /*Add 'fixed' to keep it fixed*/ -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
 .header .wrapper { padding-top: 160px; clear: both; position: relative; max-width: 800px; }
-.header .left { position: relative; text-align: center; margin: 0px 2% 0px 0px;  padding: 5% 5% 24px; width: 58%; min-height: 406px; opacity: 1; float: right; background-color: rgba(220,216,209,0.90); }
-.header .left h1 { font-size: 60px; margin: 0px 0px 12px 0px; }
+.header .left { position: relative; text-align: center; margin: 0px 2% 0px 0px;  padding: 5% 5% 4px; width: 58%; /*min-height: 406px;*/ opacity: 1; float: right; background-color: rgba(220,216,209,0.90); }
+.header .left h1 { font-size: 60px; margin: 0px 0px 0px 0px; }
+.header .left h2 { font-size: 36px; }
 .header .left img { margin: 0px 0px 24px 0px; }
 .header .left p { font-size: 20px; }
 .header .left .owl-theme .owl-controls { margin-top: 24px; }
@@ -164,7 +165,6 @@ em { color: #FFF; }
   .nav .one-third { width: 12.5%; }
   
   .header .right .top img { max-width: 48px; }
-  .header .right .top h3 { font-size: 24px;  }
   .header .right .top .left-arrow { float: left; margin-top: 16px; }
   .header .right .top .right-arrow { float: right; margin-top: 16px; }
   .header .right .bottom h2 { font-size: 48px;  }
@@ -173,7 +173,6 @@ em { color: #FFF; }
   .header .left { width: 100%; margin: 24px 0px 0px; }
   .header .right { width: 100%; }
   .header .right .top img { max-width: 64px; }
-  .header .right .top h3 { font-size: 28px;  }
   
   .footer { text-align: center; }
   .footer span { float: none; display: block; }
@@ -183,7 +182,7 @@ em { color: #FFF; }
 @media(max-width:480px){
   .header .wrapper {  }
   .header .right .top img { max-width: 36px; }
-  .header .right .top h3 { font-size: 24px; }
+  .header .right .eye { right: 0; left: auto; }
   
   .nav:hover ul,.nav:active ul { margin: 0px -12px 0px 0px;}
   
