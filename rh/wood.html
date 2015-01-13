@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<title>Restoration Hardwoods</title>
-	<meta name="description" content="Peter Thomas Designs">
+	<title>Revival Hardwoods</title>
+	<meta name="description" content="revival hardwoods">
 	<meta name="author" content="jacob debenedetto">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href="css/normalize.css">
@@ -21,42 +21,42 @@
 		<div class="nav fade-effect bottom-nav">
 			<div class="wrapper">
 				<div class="left">
-					<img onclick="setScrollTop(0);" src="img/logo.png" class="logo"/>
-					<img onclick="setScrollTop(0);" src="img/logo-small.png" class="logo-small"/>
+					<a href="../index.html"><img src="img/logo.png" class="logo"/></a>
+					<a href="../index.html"><img src="img/logo-small.png" class="logo-small"/></a>
 				</div>
 				<div class="right">
 					<img class="button fade-effect" src="img/nav-button.png"/>
 					<ul class="fade-effect">
-						<a>
+						<div>
 							<li class="fade-effect navi">COLORS
 								<ul class="fade-effect">
 									<div>
-										<li class="fade-effect"><img src="img/thumbnails/010101.jpg"/></li>
-										<li class="fade-effect"><img src="img/thumbnails/020101.jpg"/></li>
-										<li class="fade-effect"><img src="img/thumbnails/030101.jpg"/></li>
-										<li class="fade-effect"><img src="img/thumbnails/040101.jpg"/></li>
-										<li class="fade-effect"><img src="img/thumbnails/050101.jpg"/></li>
-										<li class="fade-effect"><img src="img/thumbnails/060101.jpg"/></li>
-										<li class="fade-effect"><img src="img/thumbnails/070101.jpg"/></li>
-										<li class="fade-effect"><img src="img/thumbnails/080101.jpg"/></li>
+										<li class="fade-effect"><a href="#"><img src="img/thumbnails/010101.jpg"/></a></li>
+										<li class="fade-effect"><a href="#"><img src="img/thumbnails/020101.jpg"/></a></li>
+										<li class="fade-effect"><a href="#"><img src="img/thumbnails/030101.jpg"/></a></li>
+										<li class="fade-effect"><a href="#"><img src="img/thumbnails/040101.jpg"/></a></li>
+										<li class="fade-effect"><a href="#"><img src="img/thumbnails/050101.jpg"/></a></li>
+										<li class="fade-effect"><a href="#"><img src="img/thumbnails/060101.jpg"/></a></li>
+										<li class="fade-effect"><a href="#"><img src="img/thumbnails/070101.jpg"/></a></li>
+										<li class="fade-effect"><a href="#"><img src="img/thumbnails/080101.jpg"/></a></li>
 									</div>
 								</ul>
 							</li>
-						</a>
-						<a>
+						</div>
+						<div>
 							<li class="fade-effect navi">PATTERNS
 								<ul class="fade-effect">
 									<div>
-										<li><img src="img/thumbnails/normal.jpg"/></li>
-										<li><img src="img/thumbnails/herringbone.jpg"/></li>
-										<li><img src="img/thumbnails/chevron.jpg"/></li>
+										<li class="one-third fade-effect"><a href="#"><img src="img/thumbnails/normal.jpg"/></a></li>
+										<li class="one-third fade-effect"><a href="#"><img src="img/thumbnails/herringbone.jpg"/></a></li>
+										<li class="one-third fade-effect"><a href="#"><img src="img/thumbnails/chevron.jpg"/></a></li>
 									</div>
 								</ul>
 							</li>	
-						</a>
-						<a href="wood.html"><li>THE WOOD</li></a>
-						<a href="why-us.html"><li>WHY US</li></a>
-						<a class="popup-youtube" href="https://www.youtube.com/watch?v=v67savG66tE"><li><img src="img/shopping-cart.png"/></li></a>
+						</div>
+						<a href="wood.html" class="fade-effect"><li>THE WOOD</li></a>
+						<a href="why-us.html" class="fade-effect"><li>WHY US</li></a>
+						<a class="# fade-effect"><li><img src="img/shopping-cart.png"/></li></a>
 					</ul>
 				</div>
 			</div>
@@ -74,7 +74,7 @@
 		<!--footer-->
 		<div class="footer">
 			<div class="wrapper">
-				<span style="float: left; color: #999999;">Copyright Restoration Hardwoods. All Rights Reserved.</span>
+				<span id="date" style="float: left; color: #999999;">Copyright Restoration Hardwoods. All Rights Reserved.</span>
 			</div>
 		</div>
 	</div>
@@ -88,7 +88,7 @@
 		$(document).ready(function() {
 			$( window ).scroll(function() {	checkAnimations(); });
 			function checkAnimations() {
-				if ($(window).scrollTop() <= 0){$( ".bottom-nav" ).css( "top", "10%" );	$('.header').css("height",$(window).height());}
+				if ($(window).scrollTop() <= 0){$( ".bottom-nav" ).css( "top", "32px" );	$('.header').css("height",$(window).height());}
 				else{	$( ".bottom-nav" ).css( "top", "0%" );}
 			}
 			//change the screenheight after scrolling to the top (desktop feature)
@@ -114,6 +114,8 @@
 		function goToSlide(number,id) {
 			$("#carousel"+id).carousel(number);
 		}
+		//footer
+		document.getElementById('date').innerHTML="@ "+(new Date().getFullYear())+" Copyright Revival Hardwoods. All Rights Reserved.";
 	</script>
 </body>
 </html>

@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<title>Restoration Hardwoods</title>
-	<meta name="description" content="Peter Thomas Designs">
+	<title>Revival Hardwoods</title>
+	<meta name="description" content="revival hardwoods">
 	<meta name="author" content="jacob debenedetto">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href="./rh/css/normalize.css">
@@ -23,8 +23,8 @@
 		<div class="nav fade-effect bottom-nav">
 			<div class="wrapper">
 				<div class="left">
-					<img onclick="setScrollTop(0);" src="./rh/img/logo.png" class="logo"/>
-					<img onclick="setScrollTop(0);" src="./rh/img/logo-small.png" class="logo-small"/>
+					<a href="index.html"><img src="./rh/img/logo.png" class="logo"/></a>
+					<a href="index.html"><img src="./rh/img/logo-small.png" class="logo-small"/></a>
 				</div>
 				<div class="right">
 					<img class="button fade-effect" src="./rh/img/nav-button.png"/>
@@ -64,6 +64,7 @@
 			</div>
 		</div>
 		
+		<div class="loader"><img src="./rh/img/loading.gif"/></div>
 		<!--Top-->
 		<div class="header fade-effect" style="background-image: url('./rh/img/backgrounds/010101.jpg');">
 			<div class="wrapper">
@@ -164,7 +165,7 @@
 		<!--footer-->
 		<div class="footer">
 			<div class="wrapper">
-				<span style="float: left; color: #999999;">Copyright Restoration Hardwoods. All Rights Reserved.</span>
+				<span id="date" style="float: left; color: #999999;">Copyright Revival Hardwoods. All Rights Reserved.</span>
 			</div>
 		</div>
 	</div>
@@ -215,6 +216,8 @@
 			
 			//change background height to device height
 			$('.header').css("height",$(window).height());
+			//footer
+			document.getElementById('date').innerHTML="@ "+(new Date().getFullYear())+" Copyright Revival Hardwoods. All Rights Reserved.";
 		});
 		function nextMenu() { slide2.trigger("owl.next");	}
 		function prevMenu() { slide2.trigger("owl.prev");	}

@@ -4,7 +4,7 @@
   */
 
 html { background-color: #e5e5e5; }
-body { font-family: 'lincoln';  background-image: url('../img/bg-small.png');}
+body { font-family: 'lincoln';  background: transparent; }
 h1 { margin: 0px; }
 h2 { margin: 0px; }
 h3 { margin: 0px; }
@@ -45,6 +45,8 @@ em { color: #FFF; }
 .logo-small { cursor: pointer; display: none;  }
 .bottom-nav { /*bottom:15%;*/ top: 32px; }
 
+.loader { position: absolute; min-height:50px; height: 100%; width: 100%; z-index: -1; }
+.loader img { position: absolute; top: 0; bottom: 0; right: 0; left: 0; margin: auto; }
 .cont { height: 100%; }
 .header { min-height: 320px; background: url('') no-repeat center center; /*Add 'fixed' to keep it fixed*/ -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
 .header .wrapper { padding-top: 160px; clear: both; position: relative; max-width: 800px; }
