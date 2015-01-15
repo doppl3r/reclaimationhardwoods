@@ -73,7 +73,7 @@ h3.active { color: #70614d; }
 @media(max-width:1024px){ }
 @media(max-width:960px){
   .header h1 { font-size: 64px; }
-  .header p { font-size: 18px; line-height: 28px; }
+  .header p { font-size: 20px; line-height: 28px; }
 }
 @media(max-width:640px){
 
