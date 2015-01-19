@@ -73,9 +73,12 @@ em { color: #FFF; }
 
 .header .right .body img { width: 100%; height: auto; }
 .header .right .bottom { padding: 0px 8px; background-color: rgba(220,216,209,0.90); }
+.header .right .bottom.right-align { text-align: right; }
+.header .right .bottom.left-align { text-align: left; }
 .header .right .bottom a:last-of-type h2 { /*border-left: 1px solid #a8a5a0; */}
 .header .right .bottom a:last-of-type h2.hide { visibility: hidden; }
-.header .right .bottom h2 { display: inline-block; font-size: 60px; line-height: 50px; padding: 8px 0px 0px; text-align: center; width: 40%; }
+.header .right .bottom h2 { display: inline-block; font-size: 60px; line-height: 50px; padding: 8px 0px 0px; text-align: center; width: 35%; }
+
 .header .right .bottom a { text-decoration: none; color: inherit; }
 .header .right .bottom a:hover { color: #FFF; }
 .header .right .bottom .left-arrow { float: left; margin-top: 12px; cursor: pointer; }
@@ -83,7 +86,7 @@ em { color: #FFF; }
 .header .right .bottom .right-arrow { float: right; margin-top: 12px; cursor: pointer; }
 .header .right .buy { display: block; margin-top: 8px; background-color: #352819;color: #FFF; text-transform: uppercase; text-decoration: none; font-size: 48px; padding: 14px 0px 10px; line-height: 36px; }
 .header .right .buy:hover { opacity: .5; }
-.header .right .eye { position: absolute; left:0; margin-top: 8px; opacity: 0; width: 16px; }
+.header .right .eye { position: absolute; left: -32px; top: -8px; margin-top: 8px; opacity: 0; width: 24px; }
 .header .right .eye:hover { cursor: pointer; }
 
 .footer { width: 100%; display: block; background-color: #d9d9d9; min-height: 96px; padding: 24px 0px;  }
@@ -184,9 +187,10 @@ em { color: #FFF; }
   .nav .one-third { width: 12.5%; }
   
   .header .wrapper { padding-top: 104px; }
-  .header .left { width: 100%; margin: 24px 0px 0px; }
+  .header .left { width: 100%; margin: 6px 0px 0px; }
   .header .right { width: 100%; }
   .header .right .top img { max-width: 64px; }
+  .header .right .eye { top: auto; left: auto; right: 0; }
   
   .footer { text-align: center; }
   .footer span { float: none; display: block; }
@@ -196,7 +200,6 @@ em { color: #FFF; }
 @media(max-width:480px){
   .header .wrapper {  }
   .header .right .top img { max-width: 36px; }
-  .header .right .eye { right: 0; left: auto; }
   
   .nav:hover ul,.nav:active ul { margin: 0px -12px 0px 0px;}
   

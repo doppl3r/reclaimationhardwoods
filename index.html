@@ -45,7 +45,7 @@
 							</li>
 						</div>
 						<div>
-							<li class="fade-effect navi">PATTERNS
+							<li class="fade-effect navi">FLOORS
 								<ul class="fade-effect">
 									<div>
 										<li class="one-third fade-effect"><a href="#"><img src="./rh/img/thumbnails/normal.jpg"/></a></li>
@@ -87,7 +87,7 @@
 									<a href="#" class="four"><img src="./rh/img/thumbnails/070101.jpg"/><span class="fade-effect">color</span></a>
 									<a href="#" class="four"><img src="./rh/img/thumbnails/080101.jpg"/><span class="fade-effect">color</span></a>
 								</div>
-								<div class="bottom">
+								<div class="bottom right-align">
 									<img class="left-arrow" src="./rh/img/left-arrow.png" style="opacity: 0.25;"/>
 									<a href="#" onclick="nextMenu()" class="fade-effect"><h2>NEXT</h2></a>
 									<img class="right-arrow" src="./rh/img/right-arrow.png" onclick="nextMenu()"/>
@@ -98,7 +98,7 @@
 							<div class="item">
 								<div class="top">
 									<div>
-										<h3>SELECT A PATTERN</h3>
+										<h3>SELECT A FLOOR</h3>
 									</div>
 								</div>
 								<div class="body pattern">
@@ -106,7 +106,7 @@
 									<a href="#" class="fade-effect third"><img src="./rh/img/thumbnails/herringbone.jpg"/><span class="fade-effect">pattern</span></a>
 									<a href="#" class="fade-effect third"><img src="./rh/img/thumbnails/chevron.jpg"/><span class="fade-effect">pattern</span></a>
 								</div>
-								<div class="bottom">
+								<div class="bottom right-align">
 									<img class="left-arrow" src="./rh/img/left-arrow.png" onclick="prevMenu()"/>
 									<a href="#" onclick="nextMenu()" class="fade-effect"><h2>NEXT</h2></a>
 									<img class="right-arrow" src="./rh/img/right-arrow.png" onclick="nextMenu()"/>
@@ -125,7 +125,7 @@
 									<a href="#" class="fade-effect third"><img src="./rh/img/thumbnails/room2.jpg"/><span class="fade-effect">room</span></a>
 									<a href="#" class="fade-effect third"><img src="./rh/img/thumbnails/room3.jpg"/><span class="fade-effect">room</span></a>
 								</div>
-								<div class="bottom">
+								<div class="bottom left-align">
 									<img class="left-arrow" src="./rh/img/left-arrow.png" onclick="prevMenu()"/>
 									<a href="#" class="fade-effect" onclick="nextMenu()"><h2>EDIT</h2></a>
 									<img class="right-arrow" src="./rh/img/right-arrow.png" style="opacity:0.25"/>
@@ -176,14 +176,14 @@
 		var index2 = 1; //image pattern
 		var index3 = 1; //image room
 		
-		var slide1 = $(".owl-single.one").owlCarousel({navigation : false,slideSpeed : 300,paginationSpeed : 400,navigationText : ["",""],pagination: true,autoPlay: true,mouseDrag: true,singleItem : true,itemsScaleUp:true,transitionStyle : "fade"});
+		var slide1 = $(".owl-single.one").owlCarousel({navigation : false,slideSpeed : 300,paginationSpeed : 400,navigationText : ["",""],pagination: true,autoPlay: 8500,mouseDrag: true,singleItem : true,itemsScaleUp:true,transitionStyle : "fade",rewindNav:false});
 		var slide2 = $(".owl-single.two").owlCarousel({navigation : false,slideSpeed : 300,paginationSpeed : 400,navigationText : ["",""],pagination: false,autoPlay: false,mouseDrag: false,singleItem : true,itemsScaleUp:true,transitionStyle : "fade"});
 		
 		$(document).ready(function() {
 			$( window ).scroll(function() {	checkAnimations(); });
 			function checkAnimations() {
-				if ($(window).scrollTop() <= 0){$( ".bottom-nav" ).css( "top", "32px" );	$('.header').css("height",$(window).height());}
-				else{	$( ".bottom-nav" ).css( "top", "0%" );}
+				//if ($(window).scrollTop() <= 0){$( ".bottom-nav" ).css( "top", "32px" );	$('.header').css("height",$(window).height());}
+				//else{	$( ".bottom-nav" ).css( "top", "0%" );}
 			}
 			//change the screenheight after scrolling to the top (desktop feature)
 			function setScrollTop(y){ $('body').scrollTop(y); checkAnimations(); }
@@ -198,7 +198,7 @@
 				var newIndex = ("0"+index1).slice(-2)+("0"+index2).slice(-2)+("0"+index3).slice(-2);
 				$('.header').css('background-image','url(./rh/img/backgrounds/'+newIndex+'.jpg)');
 				//slide2.trigger("owl.next");
-				$('.header .left').fadeTo(500, 0, function(){ $('.header .left').css("opacity","0"); });
+				$('.header .left').fadeTo(500, 0, function(){ $('.header .left').css("opacity","0"); setTimeout( function(){ $('.header .left').css('display','none'); },500); });
 				$('.header .right .eye').css("opacity","1");
 				loadIMG(1);
 			}
@@ -211,7 +211,7 @@
 			
 			//toggle left section class
 			$('.header .left .toggle-button').click(function() {
-				$('.header .left').fadeTo(500, 0, function(){ $('.header .left').css("opacity","0"); });
+				$('.header .left').fadeTo(500, 0, function(){ $('.header .left').css("opacity","0"); setTimeout( function(){ $('.header .left').css('display','none'); },500);});
 				$('.header .right .eye').fadeTo(500, 0, function(){ $('.header .right .eye').css("opacity","1"); });
 			});
 			//toggle left section class
