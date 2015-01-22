@@ -8,9 +8,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/owl.theme.css">
+	<link rel="stylesheet" href="css/owl.transitions.css">
 	<link rel="stylesheet" href="css/magnific-popup.css">
 	<link rel="stylesheet" href="css/stylesheet.css">
-	<link rel="stylesheet" href="css/wood.css">
 	<link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico' />
 	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 </head>
@@ -63,12 +65,22 @@
 			</div>
 		</div>
 		
-		<!--Top-->
-		<div class="header fade-effect" style="background-image: url('img/bg3.jpg');">
-			<div class="wrapper">
-				<img src="img/acorn.png"/>
-				<h1>EUROPEAN OAK</h1>
-				<p>We chose the perfect species to capture the elegant look that has graced the great interior spaces of Europe along with the resilience that helped these floors survive centuries of wear. Characterized by a creamy white complexion, this extremely hard species derives its name from the Latin word for strength.  It grows slowly in France, Germany and in the other colder regions of Europe to yield a tight, straight, grain. Unlike domestic oak, European Oak logs are cut in a unique way to yield planks with dominant straight grain a subtle and refined center cathedral grain.</p>
+		<div class="header fade-effect" style="background-image: url('img/backgrounds/colors-010101.jpg');">
+			<div class="wrapper colors-page">
+				<div class="owl-single one" class="owl-carousel">
+					<div class="item">
+						<h1>storm</h1>
+						<a class="big-button fade-effect" href="#">buy this floor</a><br/>
+						<a class="camera-icon" href="#"><img src="img/camera-icon.png"/></a>
+					</div>
+					<div class="item">
+						<h1>suede</h1>
+						<a class="big-button fade-effect" href="#">buy this floor</a><br/>
+						<a class="camera-icon" href="#"><img src="img/camera-icon.png"/></a>
+					</div>
+				</div>
+				<img class="left-arrow fade-effect dim" src="img/left-arrow-large.png"/>
+				<img class="right-arrow fade-effect dim" src="img/right-arrow-large.png"/>
 			</div>
 		</div>
 		
@@ -82,39 +94,22 @@
 	
 	<!--Scripts-->
 	<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="js/magnific-popup.js"></script>
 	<script type="text/javascript">
 		
+		var slide1 = $(".owl-single.one").owlCarousel({navigation : false,slideSpeed : 300,paginationSpeed : 400,navigationText : ["",""],pagination: false,autoPlay: false,mouseDrag: true,singleItem : true,itemsScaleUp:true,transitionStyle : "fade",rewindNav:false, afterMove: afterMove });
+		$('.left-arrow').click(function(){  slide1.trigger('owl.prev'); });
+		$('.right-arrow').click(function(){ slide1.trigger('owl.next'); });
+		
+		function afterMove(){
+			$('.header').css("background-image", "url(img/backgrounds/colors-"+("0"+(this.owl.currentItem+1)).slice(-2)+"0101"+".jpg)"); 
+		}
+		
 		$(document).ready(function() {
-			$( window ).scroll(function() {	checkAnimations(); });
-			function checkAnimations() {
-				if ($(window).scrollTop() <= 0){$( ".bottom-nav" ).css( "top", "32px" );	$('.header').css("height",$(window).height());}
-				else{	$( ".bottom-nav" ).css( "top", "0%" );}
-			}
-			//change the screenheight after scrolling to the top (desktop feature)
-			function setScrollTop(y){ $('body').scrollTop(y); checkAnimations(); }
-			
-			$('.carousel').carousel({interval: false});
-			//alter h3 color after clicked
-			$('#carousel1').on('slid.bs.carousel', function() {
-				var index = $('#carousel1 .active').index();
-				$( "#section2 .subnav h3" ).css("color","#7D6A50");
-				$( "#section2 .subnav h3:nth-child("+(((index+2)))+")").css("color","#4e381a");
-			});
-			$('#carousel2').on('slid.bs.carousel', function() {
-				var index = $('#carousel2 .active').index();
-				$( "#section3 .subnav h3" ).css("color","#7D6A50");
-				$( "#section3 .subnav h3:nth-child("+(((index+2)))+")").css("color","#4e381a");
-			});
-			
 			//change background height to device height
 			$('.header').css("minHeight",$(window).height());
 		});
-		//change to a slide when called
-		function goToSlide(number,id) {
-			$("#carousel"+id).carousel(number);
-		}
 		//footer
 		document.getElementById('date').innerHTML="@ "+(new Date().getFullYear())+" Copyright Revival Hardwoods. All Rights Reserved.";
 	</script>

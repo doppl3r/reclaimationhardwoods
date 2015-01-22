@@ -33,9 +33,10 @@ em { color: #FFF; }
 .nav ul > div > li > ul > div { background-color: rgba(220,216,209,0.90); padding: 24px; display: inline-block; margin-top: 40px; height: 144px;  }
 .nav ul > div > li > ul > div > li:first-of-type { margin: 0px -4px 0px -4px; }
 .nav ul > div > li > ul > div > li:last-of-type {}
-.nav ul > div > li > ul > div > li { display: inline-block; width: 12.5%; height: 100%;  margin: 0px -4px 0px 0px; overflow: hidden; }
-.nav ul > div > li > ul > div > li:hover {  }
-.nav ul > div > li > ul > div > li > img { width: 100%; height: 100%; }
+.nav ul > div > li > ul > div > li { position: relative; display: inline-block; width: 12.5%; height: 100%;  margin: 0px -4px 0px 0px; overflow: hidden; }
+.nav ul > div > li > ul > div > li > a > span { display: block; opacity: 0; width: 100%; height: 100%; top:0; color: #FFF; background-color: rgba(51,42,31,0.75); font-size: 16px; }
+.nav ul > div > li > ul > div > li:hover > a > span { position: absolute; opacity: 1; }
+.nav ul > div > li > ul > div > li > a > img { width: 100%; height: 100%; }
 
 .nav ul > div > li > div { display: block; position: absolute; top: 52px; left: 100%; right: -100%; text-align: center; padding: 0px; }
 .nav ul > div > li:hover > div { left: 0%; right: 0%; display: block; }
@@ -100,6 +101,8 @@ em { color: #FFF; }
   -o-transition: all 0.25s ease-out;
   transition: all 0.25s ease-out;
 }
+.dim { opacity: 1; }
+.dim:hover { opacity: 0.75; }
 
 /*Owl Carousel Override*/
 .owl-single, .owl-carousel .owl-wrapper-outer,
@@ -141,6 +144,14 @@ em { color: #FFF; }
 .zoom-anim-dialog h2 { font-size: 30px; line-height: 28px; margin: 0 0 16px; color: #c9d6da; letter-spacing: 2px; }
 .zoom-anim-dialog p  { font-size: 16px; line-height: 21px; margin: 0; }
 .zoom-anim-dialog ul { padding-left: 18px; }
+
+.wrapper.colors-page { text-align: center; position: relative; max-width: 960px; }
+.colors-page .big-button { display: inline-block; opacity: 1; background-color: #352819; color: #fff; font-size: 44px; text-transform: uppercase; padding: 2.5% 10%; }
+.colors-page .big-button:hover { opacity: 0.75; color: #fff; text-decoration: none; }
+.colors-page h1 { font-size: 80px; margin: 64px 0px 12px; color: #fff; text-transform: uppercase;}
+.colors-page .camera-icon { margin-top: 24px; display: block; }
+.colors-page .left-arrow { position: absolute; left:12px; top:280px; cursor: pointer; }
+.colors-page .right-arrow { position: absolute; right:12px; top:280px; cursor: pointer; }
 
 @media(max-width:1024px){
   .bottom-nav .wrapper { padding: 0px 36px; }
@@ -184,6 +195,8 @@ em { color: #FFF; }
   .nav ul > div > li > ul > div > li {  width: 12.5%; display: inline-block; height: 100%;}
   .nav ul > div > li > ul > div > li > a { display: block; height: 100%; }
   .nav ul > div > li > ul > div > li > a > img { width: 100%; height: 100%; }
+  .nav ul > div > li > ul > div > li > a > span { font-size: 0px; } /*completely hide text*/
+  .nav ul > div > li > ul > div > li:hover > a > span {  }
   .nav .one-third { width: 12.5%; }
   
   .header .wrapper { padding-top: 104px; }
@@ -200,6 +213,9 @@ em { color: #FFF; }
 @media(max-width:480px){
   .header .wrapper {  }
   .header .right .top img { max-width: 36px; }
+  .colors-page .big-button { padding: 2.5% 5%; }
+  .colors-page .left-arrow { width: 24px; height: auto; }
+  .colors-page .right-arrow { width: 24px; height: auto; }
   
   .nav:hover ul,.nav:active ul { margin: 0px -12px 0px 0px;}
   
