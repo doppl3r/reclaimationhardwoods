@@ -102,7 +102,7 @@ em { color: #FFF; }
   transition: all 0.25s ease-out;
 }
 .dim { opacity: 1; }
-.dim:hover { opacity: 0.75; }
+.dim:hover { opacity: 0.5; }
 
 /*Owl Carousel Override*/
 .owl-single, .owl-carousel .owl-wrapper-outer,
@@ -128,17 +128,17 @@ em { color: #FFF; }
 
 /*Magnific Popup Override*/
 .zoom-anim-dialog {
-  background-color: rgba(84,135,143,.95);
-  padding:30px 30px;
-  max-width: 420px;
+  padding:0px;
+  max-width: 600px;
   margin:40px auto;
   position:relative;
   color: #c9d6da;
 }
+.zoom-anim-dialog img { max-width: 100%; }
 .mfp-img-mobile .mfp-image-holder { cursor: default; }
 .mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close { cursor: pointer; }
 .zoom-anim-dialog input,.zoom-anim-dialog span { margin-bottom: 8px; display: block; }
-.mfp-close-btn-in .mfp-close,.mfp-close:active { background-color: #192125; color: #FFF; top: 0; }
+.mfp-close-btn-in .mfp-close,.mfp-close:active {  color: #FFF; top: 0; }
 .mfp-iframe-holder .mfp-close, .mfp-image-holder .mfp-close { background: none; margin:0px; cursor: pointer; }
 .zoom-anim-dialog h1 { font-size: 42px; line-height: 38px; margin: 0 0 16px;}
 .zoom-anim-dialog h2 { font-size: 30px; line-height: 28px; margin: 0 0 16px; color: #c9d6da; letter-spacing: 2px; }
