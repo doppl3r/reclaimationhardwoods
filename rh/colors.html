@@ -112,9 +112,14 @@
 				<img class="left-arrow fade-effect dim" src="img/left-arrow-large.png"/>
 				<img class="right-arrow fade-effect dim" src="img/right-arrow-large.png"/>
 				<!--popup box-->
-				<div id="popup-box" class="zoom-anim-dialog mfp-hide">
-					<img src="img/backgrounds/010101.jpg"/>
-					<div class="sub-nav"></div>
+				<div id="popup-box" class="zoom-anim-dialog mfp-hide noselect">
+					<img class="fade-effect" src="img/backgrounds/010101.jpg"/>
+					<div class="sub-nav">
+						<div class="left"><span id="text1">storm</span><span id="text2">plank</span><span id="text3">pooltable room</span></div>
+						<div class="right"><a class="button-small" href="#">buy this floor</a></div>
+						<img class="left-arrow" src="img/left-arrow.png"/>
+						<img class="right-arrow" src="img/right-arrow.png"/>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -132,19 +137,63 @@
 	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="js/magnific-popup.js"></script>
 	<script type="text/javascript">
+		var index1 = 1;
+		var index2 = 1;
+		var index3 = 1;
+		var currentSlide=1;
+		var text = [["storm","suede","stealth","drift","truffle","cognac","barrel","chocolate"],
+					 ["plank","herringbone-1","herringbone-2"],
+					 ["room-1","room-2","room-3"]];
+		var slide1 = $(".owl-single.one").owlCarousel({navigation : false,slideSpeed : 300,paginationSpeed : 400,navigationText : ["",""],pagination: false,autoPlay: false,mouseDrag: false,singleItem : true,itemsScaleUp:true,transitionStyle : "fade",afterMove: afterMove });
 		
-		var slide1 = $(".owl-single.one").owlCarousel({navigation : false,slideSpeed : 300,paginationSpeed : 400,navigationText : ["",""],pagination: false,autoPlay: false,mouseDrag: true,singleItem : true,itemsScaleUp:true,transitionStyle : "fade",afterMove: afterMove });
-		$('.left-arrow').click(function(){  slide1.trigger('owl.prev'); });
-		$('.right-arrow').click(function(){ slide1.trigger('owl.next'); });
-		$('.camera-icon').click(function(){  });
+		$('.colors-page > .left-arrow').click(function(){  slide1.trigger('owl.prev'); });
+		$('.colors-page > .right-arrow').click(function(){ slide1.trigger('owl.next'); });
+		$('.sub-nav .left-arrow').click(function(){ prevIndex(0,false); updateBackground(); });
+		$('.sub-nav .right-arrow').click(function(){ nextIndex(0,false); updateBackground(); });
+		$('.camera-icon').click(function(){ index1=currentSlide+1; updateBackground(); });
 		
-		function afterMove(){	$('.header').css("background-image", "url(img/backgrounds/colors-"+("0"+(this.owl.currentItem+1)).slice(-2)+"0101"+".jpg)"); }
-		function parseID() { return parseInt(document.location.href.substring(document.location.href.lastIndexOf("?=")+2))-1;}
+		$('#text1').click(function(){ nextIndex(0,true); updateBackground(); });
+		$('#text2').click(function(){ nextIndex(1,true); updateBackground(); });
+		$('#text3').click(function(){ nextIndex(2,true); updateBackground(); });
+		
+		function nextIndex(i,loop){
+			switch (i){ case(0): index1++; break; case(1): index2++; break; case(2): index3++; break; default: index1++; break; }
+			if (index1 > 8){ if (!loop){index2++;} index1=1; }
+			if (index2 > 3){ if (!loop){index3++;} index2=1; }
+			if (index3 > 3){ index3=1; }
+		}
+		
+		function prevIndex(i,loop){
+			switch (i){ case(0): index1--; break; case(1): index2--; break; case(2): index3--; break; default: index1++; break; }
+			if (index1 < 1){ index2--; index1=8; }
+			if (index2 < 1){ index3--; index2=3; }
+			if (index3 < 1){ index3=3; }
+		}
+		
+		function afterMove(){
+			currentSlide = this.owl.currentItem;
+			var i = ("0"+(currentSlide+1)).slice(-2);
+			$('.header').css("background-image", "url(img/backgrounds/colors-"+i+"0101"+".jpg)");
+		}
+		
+		function parseURL() {
+			var href=document.location.href;
+			if (href.lastIndexOf("?=") >= 0) return currentSlide = parseInt(href.substring(href.lastIndexOf("?=")+2))-1;
+			else return 0;
+		}
+		
+		function updateBackground(){
+			var newIndex = ("0"+index1).slice(-2)+("0"+index2).slice(-2)+("0"+index3).slice(-2);
+			$('.zoom-anim-dialog > img').attr('src','img/backgrounds/'+newIndex+'.jpg');
+			$('#text1').text(text[0][index1-1]);
+			$('#text2').text(text[1][index2-1]);
+			$('#text3').text(text[2][index3-1]);
+		}
 		
 		//load stuff when document is ready
 		$(document).ready(function() {
 			$('.header').css("minHeight",$(window).height()); //change background height to device height
-			slide1.trigger('owl.goTo',parseID()); //go to color according to page url
+			slide1.trigger('owl.goTo',parseURL()); //go to color according to page url
 		});
 		
 		//footer

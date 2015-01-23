@@ -101,6 +101,14 @@ em { color: #FFF; }
   -o-transition: all 0.25s ease-out;
   transition: all 0.25s ease-out;
 }
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 .dim { opacity: 1; }
 .dim:hover { opacity: 0.5; }
 
@@ -134,7 +142,7 @@ em { color: #FFF; }
   position:relative;
   color: #c9d6da;
 }
-.zoom-anim-dialog img { max-width: 100%; }
+.zoom-anim-dialog > img { max-width: 100%; min-height: 378px; }
 .mfp-img-mobile .mfp-image-holder { cursor: default; }
 .mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close { cursor: pointer; }
 .zoom-anim-dialog input,.zoom-anim-dialog span { margin-bottom: 8px; display: block; }
@@ -152,6 +160,16 @@ em { color: #FFF; }
 .colors-page .camera-icon { margin-top: 24px; display: block; }
 .colors-page .left-arrow { position: absolute; left:12px; top:280px; cursor: pointer; }
 .colors-page .right-arrow { position: absolute; right:12px; top:280px; cursor: pointer; }
+.sub-nav { background-color: #e1ded8; display: block; position: relative; padding: 32px 0px 32px 48px; }
+.sub-nav .left { width: 50%; display: inline-block; }
+.sub-nav .right { width: 50%; display: inline-block; margin-right:-4px; }
+.sub-nav span, .sub-nav a { display: inline-block; color: #352819; font-size: 21px; text-transform: uppercase; border-right: 1px solid #352819; padding: 0px 6px; cursor: pointer; min-width: 72px; text-align:center; }
+.sub-nav span:last-of-type { border: none; }
+.sub-nav span:hover { background-color: rgba(53,40,25,0.25); opacity: 0.5 }
+.sub-nav a { background-color: #352819; padding: 12px 24px; color: #FFF; text-decoration: none; margin-left: 64px; white-space: nowrap; }
+.sub-nav .left-arrow  { position: absolute; top: 42px; left: 12px; cursor: pointer; }
+.sub-nav .right-arrow { position: absolute; top: 42px; right: 12px; cursor: pointer; }
+
 
 @media(max-width:1024px){
   .bottom-nav .wrapper { padding: 0px 36px; }
@@ -204,6 +222,10 @@ em { color: #FFF; }
   .header .right { width: 100%; }
   .header .right .top img { max-width: 64px; }
   .header .right .eye { top: auto; left: auto; right: 0; }
+  .sub-nav { text-align:center; padding: 30px 12px; }
+  .sub-nav .left, .sub-nav .right { width: 100%; }
+  .sub-nav a { display: inline-block; margin: 12px 0px 0px; }
+  .zoom-anim-dialog > img { min-height: initial; }
   
   .footer { text-align: center; }
   .footer span { float: none; display: block; }
