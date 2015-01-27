@@ -142,7 +142,7 @@ em { color: #FFF; }
   position:relative;
   color: #c9d6da;
 }
-.zoom-anim-dialog > img { max-width: 100%; min-height: 378px; }
+.zoom-anim-dialog > img { max-width: 100%; min-height: 378px; cursor: pointer;  }
 .mfp-img-mobile .mfp-image-holder { cursor: default; }
 .mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close { cursor: pointer; }
 .zoom-anim-dialog input,.zoom-anim-dialog span { margin-bottom: 8px; display: block; }
