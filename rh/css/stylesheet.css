@@ -96,8 +96,8 @@ em { color: #FFF; }
 .trim.body h2 { font-size: 36px; margin-bottom: 12px; }
 .trim.body .cat { display: inline-block; width: 20%; margin: 0px -4px 0px 0px; text-align: center; padding: 0px 6px;}
 .trim.body .cat img { display: inline-block; max-width: 100%;  }
-.trim.body .cat a { display: block; margin: 12px 0px; font-family: 'gearedslab'; font-size: 18px; color: #352819; }
-.trim.body .cat a:hover { text-decoration: none; opacity: .5; }
+.trim.body .cat span { display: block; margin: 12px 0px; font-family: 'gearedslab'; font-size: 18px; color: #352819; }
+.trim.body .cat:hover { text-decoration: none; opacity: .5; }
 .trim.body .left, .trim.body .right { display: inline-block; width: 50%; margin: 0px -4px 0px 0px; text-align: center; }
 .trim.body .left { padding-right: 24px; }
 .trim.body .right { padding-left: 24px; vertical-align: top; text-align: right; }
