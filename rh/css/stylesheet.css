@@ -33,7 +33,7 @@ em { color: #FFF; }
 .nav ul > div > li > ul > div { background-color: rgba(220,216,209,0.90); padding: 24px; display: inline-block; margin-top: 40px; height: 144px;  }
 .nav ul > div > li > ul > div > li:first-of-type { margin: 0px -4px 0px -4px; }
 .nav ul > div > li > ul > div > li:last-of-type {}
-.nav ul > div > li > ul > div > li { position: relative; display: inline-block; width: 12.5%; height: 100%;  margin: 0px -4px 0px 0px; overflow: hidden; }
+.nav ul > div > li > ul > div > li { position: relative; display: inline-block; width: 12.5%; vertical-align: top; height: 100%;  margin: 0px -4px 0px 0px; overflow: hidden; }
 .nav ul > div > li > ul > div > li > a > span { display: block; opacity: 0; width: 100%; height: 100%; top:0; color: #FFF; background-color: rgba(51,42,31,0.75); font-size: 16px; }
 .nav ul > div > li > ul > div > li:hover > a > span { position: absolute; opacity: 1; }
 .nav ul > div > li > ul > div > li > a > img { width: 100%; height: 100%; }
