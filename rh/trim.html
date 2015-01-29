@@ -17,7 +17,7 @@
 </head>
 
 <body>
-	<div class="main-body">
+	<div class="main-body" id="top">
 		<!--top navigation-->
 		<div class="nav fade-effect bottom-nav">
 			<div class="wrapper">
@@ -64,38 +64,92 @@
 			</div>
 		</div>
 		
-		<div class="header fade-effect" style="background-image: url('img/backgrounds/patterns-010101.jpg');">
-			<div class="wrapper colors-page">
-				<div class="owl-single one" class="owl-carousel">
-					<div class="item">
-						<h1>plank</h1>
-						<a class="big-button fade-effect" href="#">buy this floor</a><br/>
-						<a class="camera-icon fade-effect dim popup-with-zoom-anim" href="#popup-box"><img src="img/camera-icon.png"/></a>
+		<div class="trim body" style="background-image:url('img/bg4.jpg')">
+			<div class="wrapper">
+				<div class="top">
+					<h1>trim</h1>
+					<div class="cat"><img src="img/t-molding-icon.png"/><a href="#1">T-Molding</a></div>
+					<div class="cat"><img src="img/nosing-icon.png"/><a href="#2">Nosing</a></div>
+					<div class="cat"><img src="img/reducer-icon.png"/><a href="#3">Reducer</a></div>
+					<div class="cat"><img src="img/baseshoe-icon.png"/><a href="#4">Base Shoe</a></div>
+					<div class="cat"><img src="img/baby-thresh-hold-icon.png"/><a href="#5">Baby Threshold</a></div>
+				</div>
+				<div class="bottom-item">
+					<!--T-Molding-->
+					<span id="1" style="top: -160px; position: absolute;"></span>
+					<div class="left">
+						<h2>t-molding</h2>
+						<img src="img/t-molding-thumb.png"/>
 					</div>
-					<div class="item">
-						<h1>HERRINGBONE 5"x30"</h1>
-						<a class="big-button fade-effect" href="#">buy this floor</a><br/>
-						<a class="camera-icon fade-effect dim popup-with-zoom-anim" href="#popup-box"><img src="img/camera-icon.png"/></a>
-					</div>
-					<div class="item">
-						<h1>HERRINGBONE 7"x35"</h1>
-						<a class="big-button fade-effect" href="#">buy this floor</a><br/>
-						<a class="camera-icon fade-effect dim popup-with-zoom-anim" href="#popup-box"><img src="img/camera-icon.png"/></a>
+					<div class="right">
+						<p>Available in 8 colors:</p>
+						<img src="img/thumbnails/color-options.jpg"/>
+						<a class="big-button" href="#">buy this trim</a>
+						<a href="#top" class="more"><img src="img/up-button2.png"/> see more</a>
 					</div>
 				</div>
-				<img class="left-arrow fade-effect dim" src="img/left-arrow-large.png"/>
-				<img class="right-arrow fade-effect dim" src="img/right-arrow-large.png"/>
-				<!--popup box-->
-				<div id="popup-box" class="zoom-anim-dialog mfp-hide noselect">
-					<img class="fade-effect" src="img/backgrounds/010101.jpg"/>
-					<div class="sub-nav">
-						<div class="left"><span id="text1">storm</span><span id="text2">plank</span><span id="text3">pooltable room</span></div>
-						<div class="right"><a class="button-small" href="#">buy this floor</a></div>
-						<img class="left-arrow" src="img/left-arrow.png"/>
-						<img class="right-arrow" src="img/right-arrow.png"/>
+				<div class="break"></div>
+				<div class="bottom-item">
+					<!--Nosing-->
+					<span id="2" style="top: -160px; position: absolute;"></span>
+					<div class="left">
+						<h2>Nosing</h2>
+						<img src="img/nosing-thumb.png"/>
+					</div>
+					<div class="right">
+						<p>Available in 8 colors:</p>
+						<img src="img/thumbnails/color-options.jpg"/>
+						<a class="big-button" href="#">buy this trim</a>
+						<a href="#top" class="more"><img src="img/up-button2.png"/> see more</a>
+					</div>
+				</div>
+				<div class="break"></div>
+				<div class="bottom-item">
+					<!--Reducer-->
+					<span id="3" style="top: -160px; position: absolute;"></span>
+					<div class="left">
+						<h2>Reducer</h2>
+						<img src="img/reducer-thumb.png"/>
+					</div>
+					<div class="right">
+						<p>Available in 8 colors:</p>
+						<img src="img/thumbnails/color-options.jpg"/>
+						<a class="big-button" href="#">buy this trim</a>
+						<a href="#top" class="more"><img src="img/up-button2.png"/> see more</a>
+					</div>
+				</div>
+				<div class="break"></div>
+				<div class="bottom-item">
+					<!--Base Shoe-->
+					<span id="4" style="top: -160px; position: absolute;"></span>
+					<div class="left">
+						<h2>Base Shoe</h2>
+						<img src="img/baseshoe-thumb.png"/>
+					</div>
+					<div class="right">
+						<p>Available in 8 colors:</p>
+						<img src="img/thumbnails/color-options.jpg"/>
+						<a class="big-button" href="#">buy this trim</a>
+						<a href="#top" class="more"><img src="img/up-button2.png"/> see more</a>
+					</div>
+				</div>
+				<div class="break"></div>
+				<div class="bottom-item">
+					<!--Baby Threshold-->
+					<span id="5" style="top: -160px; position: absolute;"></span>
+					<div class="left">
+						<h2>Baby Threshold</h2>
+						<img src="img/baby-thresh-hold-thumb.png"/>
+					</div>
+					<div class="right">
+						<p>Available in 8 colors:</p>
+						<img src="img/thumbnails/color-options.jpg"/>
+						<a class="big-button" href="#">buy this trim</a>
+						<a href="#top" class="more"><img src="img/up-button2.png"/> see more</a>
 					</div>
 				</div>
 			</div>
+			<a href="#top" class="up-button"><img src="img/up-button.png"/></a>
 		</div>
 		
 		<!--footer-->
@@ -108,65 +162,21 @@
 	
 	<!--Scripts-->
 	<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+	<script type="text/javascript" src="js/skrollr.min.js"></script>
+	<script type="text/javascript" src="js/skrollr.menu.min.js"></script>
 	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="js/magnific-popup.js"></script>
 	<script type="text/javascript">
-		var index1 = 1;
-		var index2 = 1;
-		var index3 = 1;
-		var currentSlide=1;
-		var text = [["storm","suede","stealth","drift","truffle","cognac","barrel","chocolate"],
-					 ["plank","herringbone-1","herringbone-2"],
-					 ["room-1","room-2","room-3"]];
-		var slide1 = $(".owl-single.one").owlCarousel({navigation : false,slideSpeed : 1000,paginationSpeed : 1000,navigationText : ["",""],pagination: false,autoPlay: false,mouseDrag: false,singleItem : true,itemsScaleUp:true,transitionStyle : "fade",afterMove: afterMove });
-		
-		$('.colors-page > .left-arrow').click(function(){  slide1.trigger('owl.prev'); });
-		$('.colors-page > .right-arrow').click(function(){ slide1.trigger('owl.next'); });
-		$('.sub-nav .left-arrow').click(function(){ prevIndex(2,false); updateBackground(); });
-		$('.sub-nav .right-arrow').click(function(){ nextIndex(2,false); updateBackground(); });
-		$('.camera-icon').click(function(){ index1=4; index2=currentSlide+1; updateBackground(); });
-		
-		$('#text1').click(function(){ nextIndex(0,true); updateBackground(); });
-		$('#text2').click(function(){ nextIndex(1,true); updateBackground(); });
-		$('#text3').click(function(){ nextIndex(2,true); updateBackground(); });
-		
-		function nextIndex(i,loop){
-			switch (i){ case(0): index1++; break; case(1): index2++; break; case(2): index3++; break; default: index1++; break; }
-			if (index1 > 8){ if (!loop){index2++;} index1=1; }
-			if (index2 > 3){ if (!loop){index3++;} index2=1; }
-			if (index3 > 3){ index3=1; }
-		}
-		
-		function prevIndex(i,loop){
-			switch (i){ case(0): index1--; break; case(1): index2--; break; case(2): index3--; break; default: index1++; break; }
-			if (index1 < 1){ index2--; index1=8; }
-			if (index2 < 1){ index3--; index2=3; }
-			if (index3 < 1){ index3=3; }
-		}
-		
-		function afterMove(){
-			currentSlide = this.owl.currentItem;
-			var i = ("0"+(currentSlide+1)).slice(-2);
-			$('.header').css("background-image", "url(img/backgrounds/patterns-01"+i+"01"+".jpg)");
-		}
-		
-		function parseURL() {
-			var href=document.location.href;
-			if (href.lastIndexOf("?=") >= 0) return currentSlide = parseInt(href.substring(href.lastIndexOf("?=")+2))-1;
-			else return 0;
-		}
-		
-		function updateBackground(){
-			var newIndex = ("0"+index1).slice(-2)+("0"+index2).slice(-2)+("0"+index3).slice(-2);
-			$('.zoom-anim-dialog > img').attr('src','img/backgrounds/'+newIndex+'.jpg');
-			$('#text1').text(text[0][index1-1]);
-			$('#text2').text(text[1][index2-1]);
-			$('#text3').text(text[2][index3-1]);
-		}
-		
+		var s = skrollr.init(/*other stuff*/);
+		skrollr.menu.init(s, {
+			//skrollr will smoothly animate to the new position using `animateTo`.
+			animate: true,
+			easing: 'swing', scale: 2,
+			duration: function(currentTop, targetTop) {return 1000;}
+		});
 		//load stuff when document is ready
 		$(document).ready(function() {
-			$('.header').css("minHeight",$(window).height()); //change background height to device height
+			$('.body').css("minHeight",$(window).height()); //change background height to device height
 			slide1.trigger('owl.goTo',parseURL()); //go to color according to page url
 		});
 		
