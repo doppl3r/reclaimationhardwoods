@@ -76,7 +76,8 @@ h3.active { color: #70614d; }
   .header p { font-size: 20px; line-height: 28px; }
 }
 @media(max-width:640px){
-
+	.carousel-inner .item .left { width: 100%; display: block; text-align: center; }
+	.subnav { text-align: center; }
 }
 @media(max-width:480px){
 

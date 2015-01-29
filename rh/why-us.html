@@ -179,8 +179,8 @@
 		$(document).ready(function() {
 			$( window ).scroll(function() {	checkAnimations(); });
 			function checkAnimations() {
-				if ($(window).scrollTop() <= 0){$( ".bottom-nav" ).css( "top", "32px" );	$('.header').css("minHeight",$(window).height());}
-				else{	$( ".bottom-nav" ).css( "top", "0%" );}
+				//if ($(window).scrollTop() <= 0){$( ".bottom-nav" ).css( "top", "32px" );	$('.header').css("minHeight",$(window).height());}
+				//else{	$( ".bottom-nav" ).css( "top", "0%" );}
 			}
 			//change the screenheight after scrolling to the top (desktop feature)
 			function setScrollTop(y){ $('body').scrollTop(y); checkAnimations(); }
