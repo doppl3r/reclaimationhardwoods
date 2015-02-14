@@ -18,8 +18,15 @@ em { color: #FFF; }
 .main-body {  margin: 0px auto; }
 .wrapper { max-width: 1024px; margin: 0px auto; padding: 0px 12px; height: 100%; clear: both; }
 .nav { z-index: 1; top:32px; left: 0px; right: 0px; position: fixed; height: 92px; display: block; background-color: rgba(220,216,209,0.90); clear: both;}
-.nav .left { float: left; line-height: 92px; }
-.nav .right { float: right; line-height: 92px; }
+
+
+/*.nav .left { float: left; line-height: 92px; }*/
+/*.nav .right { float: right; line-height: 92px; }*/
+
+.nav .left { float: left; line-height: 92px; position: fixed; left: 10%; }
+.nav .right { float: right; line-height: 92px; position: fixed; right: 10%; }
+
+
 .nav .button { display: none; }
 .nav img { vertical-align: middle; }
 .nav ul { margin: 0px; color: #cad6da; font-size: 24px; list-style: none; }
@@ -28,12 +35,12 @@ em { color: #FFF; }
 .nav ul > div:hover > li, .nav ul a:hover { color: #b38654; list-style: none; }
 .nav ul > a { margin: 0px 0px 0px 18px; }
 /*drop-down*/
-.nav ul > div > li > ul { display: block; position: absolute; top: 52px; left: 100%; right: -100%; text-align: center; padding: 0px; }
-.nav ul > div > li:hover > ul,.nav ul a li:active > ul { left: 0%; right: 0%; display: block;  }
+.nav ul > div > li > ul { display: block; position: absolute; top: 52px; /*left: 100%;*/ left: 140%; right: -100%; text-align: center; padding: 0px; }
+.nav ul > div > li:hover > ul,.nav ul a li:active > ul { left: 0%; right: 0%; display: block; position: fixed; top: 84px;  }
 .nav ul > div > li > ul > div { background-color: rgba(220,216,209,0.90); padding: 24px; display: inline-block; margin-top: 40px; height: 144px;  }
 .nav ul > div > li > ul > div > li:first-of-type { margin: 0px -4px 0px -4px; }
 .nav ul > div > li > ul > div > li:last-of-type {}
-.nav ul > div > li > ul > div > li { position: relative; display: inline-block; width: 12.5%; vertical-align: top; height: 100%;  margin: 0px -4px 0px 0px; overflow: hidden; }
+.nav ul > div > li > ul > div > li { position: relative; display: inline-block; width: 12.5%; max-width: 96px; vertical-align: top; height: 100%;  margin: 0px -4px 0px 0px; overflow: hidden; }
 .nav ul > div > li > ul > div > li > a > span { display: block; opacity: 0; width: 100%; height: 100%; top:0; color: #FFF; background-color: rgba(51,42,31,0.75); font-size: 16px; }
 .nav ul > div > li > ul > div > li:hover > a > span { position: absolute; opacity: 1; }
 .nav ul > div > li > ul > div > li > a > img { width: 100%; height: 100%; }
@@ -51,8 +58,13 @@ em { color: #FFF; }
 .loader img { position: absolute; top: 0; bottom: 0; right: 0; left: 0; margin: auto; }
 .cont { height: 100%; }
 .header { min-height: 320px; background: url('') no-repeat center center; /*Add 'fixed' to keep it fixed*/ -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
-.header .wrapper { padding-top: 160px; clear: both; position: relative; max-width: 800px; }
-.header .left { position: relative; text-align: center; margin: 0px 2% 0px 0px;  padding: 5% 5% 4px; width: 58%; /*min-height: 406px;*/ opacity: 1; float: right; background-color: rgba(220,216,209,0.90); }
+
+
+/*.header .wrapper { padding-top: 160px; clear: both; position: relative; max-width: 1024px; }*/
+.header .wrapper {  padding-top: 160px; position: fixed; right: 10%; }
+.header .wrapper.colors-page { right: initial; }
+
+.header .left { position: relative; text-align: center; margin: 0px 2% 0px 0px;  padding: 5% 5% 4px; width: 58%;  /*min-height: 406px;*/ opacity: 1; float: right; background-color: rgba(220,216,209,0.90); }
 .header .left h1 { font-size: 60px; margin: 0px 0px 0px 0px; }
 .header .left h2 { font-size: 36px; }
 .header .left img { margin: 0px 0px 24px 0px; }
@@ -135,7 +147,11 @@ em { color: #FFF; }
 /*Owl Carousel Override*/
 .owl-single, .owl-carousel .owl-wrapper-outer,
 .owl-carousel .owl-wrapper, .owl-carousel .owl-item,
-.header .wrapper, .header .item {  position: relative; }
+
+
+/*.header .wrapper, .header .item {  position: relative; }*/
+
+
  .header .item { overflow-x: hidden; overflow-y:hidden; }
 .owl-single .bg-img {
   width: 100%;
@@ -190,8 +206,11 @@ em { color: #FFF; }
 .sub-nav .left-arrow  { position: absolute; top: 42px; left: 12px; cursor: pointer; }
 .sub-nav .right-arrow { position: absolute; top: 42px; right: 12px; cursor: pointer; }
 
-
 @media(max-width:1024px){
+	.header .wrapper { padding-top: 160px; clear: both; position: relative; max-width: 800px; right: 0; }
+	.nav .left { float: left; line-height: 92px; position: relative; left: initial; }
+	.nav .right { float: right; line-height: 92px; position: relative; right: initial; }
+
   .bottom-nav .wrapper { padding: 0px 36px; }
   .trim.body .wrapper { padding: 160px 36px; }
 }
@@ -230,7 +249,7 @@ em { color: #FFF; }
   .nav:hover .button { opacity: 0.15; }
   
   .nav:hover ul > div > li > ul { display: block; top: -32px;  bottom: -46px; width: 100%; padding-top: 32px; background-color: transparent;}
-  .nav:hover ul > div > li:hover > ul { display: block; right: 16px; }
+  .nav:hover ul > div > li:hover > ul { display: block; right: 16px; height: 170px; }
   .nav ul > div > li > ul > div { margin-top: 0px; padding: 0; width: 100%; height: 92px; overflow: hidden; }
   .nav ul > div > li > ul > div > li {  width: 12.5%; display: inline-block; height: 100%;}
   .nav ul > div > li > ul > div > li > a { display: block; height: 100%; }
