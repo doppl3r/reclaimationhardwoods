@@ -37,6 +37,7 @@ em { color: #FFF; }
 /*drop-down*/
 .nav ul > div > li > ul { display: block; position: absolute; top: 52px; /*left: 100%;*/ left: 140%; right: -100%; text-align: center; padding: 0px; }
 .nav ul > div > li:hover > ul,.nav ul a li:active > ul { left: 0%; right: 0%; display: block; position: fixed; top: 84px;  }
+.nav ul > div > li:hover > ul:hover { background-color: rgba(220,216,209,0.25); }
 .nav ul > div > li > ul > div { background-color: rgba(220,216,209,0.90); padding: 24px; display: inline-block; margin-top: 40px; height: 144px;  }
 .nav ul > div > li > ul > div > li:first-of-type { margin: 0px -4px 0px -4px; }
 .nav ul > div > li > ul > div > li:last-of-type {}

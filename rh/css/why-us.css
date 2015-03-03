@@ -1,6 +1,6 @@
 .header h1 { font-size: 80px; color: #4f3818; }
 .header p { font-size: 22px; color: #432e12; line-height: 38px; margin-bottom: 48px;}
-.header .wrapper { max-width: 640px; }
+.header .wrapper { max-width: 640px; position: initial; left: initial; }
 
 #section2 { background-color: #d5cec4; min-height: 640px; }
 #section2 p { font-family: 'gearedslab'; margin: 56px 0px 16px 0px; font-weight: normal; font-size: 20px; color: #69563c; }

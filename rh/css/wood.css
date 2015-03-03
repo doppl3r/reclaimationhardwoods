@@ -1,7 +1,7 @@
 .header h1 { font-size: 120px; color: #FFF; display: inline-block; text-shadow: 0px 0px 7px rgba(0,0,0,0.5); }
 .header img { display: inline-block; vertical-align: top; max-height: 120px; }
 .header p { font-size: 22px; color: #FFF; line-height: 38px; margin-bottom: 48px; }
-.header .wrapper { max-width: 640px; }
+.header .wrapper { max-width: 640px; position: initial; left: initial; }
 
 
 @media(max-width:1024px){ }
