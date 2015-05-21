@@ -203,6 +203,11 @@
 		$('.buy').click(function(){ updateBackground(); });
 		$('.zoom-anim-dialog > img').click(function(){ nextIndex(2,false); updateBackground(); });
 		
+        $.magnificPopup.instance.close = function () {
+            changeBG();
+            $.magnificPopup.proto.close.call(this);
+        }; 
+        
 		$('#text1').click(function(){ nextIndex(0,true); updateBackground(); });
 		$('#text2').click(function(){ nextIndex(1,true); updateBackground(); });
 		$('#text3').click(function(){ nextIndex(2,true); updateBackground(); });
@@ -212,7 +217,7 @@
 			if (index1 > 8){ if (!loop){index2++;} index1=1; }
 			if (index2 > 3){ if (!loop){index3++;} index2=1; }
 			if (index3 > 3){ index3=1; }
-            changeBG();
+            
 		}
 		
 		function prevIndex(i,loop){
