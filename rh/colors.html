@@ -70,42 +70,42 @@
 					<div class="item">
 						<h1>suede</h1>
 						<a class="big-button fade-effect" href="#">buy this floor</a><br/>
-						<a class="camera-icon fade-effect dim popup-with-zoom-anim" href="#popup-box"><img src="img/camera-icon.png"/></a>
+						<a class="eye-icon-large fade-effect dim popup-with-zoom-anim" href="#popup-box"><img src="img/eye-icon-large.png"/></a>
 					</div>
 					<div class="item">
 						<h1>drift</h1>
 						<a class="big-button fade-effect" href="#">buy this floor</a><br/>
-						<a class="camera-icon fade-effect dim popup-with-zoom-anim" href="#popup-box"><img src="img/camera-icon.png"/></a>
+						<a class="eye-icon-large fade-effect dim popup-with-zoom-anim" href="#popup-box"><img src="img/eye-icon-large.png"/></a>
 					</div>
 					<div class="item">
 						<h1>storm</h1>
 						<a class="big-button fade-effect" href="#">buy this floor</a><br/>
-						<a class="camera-icon fade-effect dim popup-with-zoom-anim" href="#popup-box"><img src="img/camera-icon.png"/></a>
+						<a class="eye-icon-large fade-effect dim popup-with-zoom-anim" href="#popup-box"><img src="img/eye-icon-large.png"/></a>
 					</div>
 					<div class="item">
 						<h1>stealth</h1>
 						<a class="big-button fade-effect" href="#">buy this floor</a><br/>
-						<a class="camera-icon fade-effect dim popup-with-zoom-anim" href="#popup-box"><img src="img/camera-icon.png"/></a>
+						<a class="eye-icon-large fade-effect dim popup-with-zoom-anim" href="#popup-box"><img src="img/eye-icon-large.png"/></a>
 					</div>
 					<div class="item">
 						<h1>cognac</h1>
 						<a class="big-button fade-effect" href="#">buy this floor</a><br/>
-						<a class="camera-icon fade-effect dim popup-with-zoom-anim" href="#popup-box"><img src="img/camera-icon.png"/></a>
+						<a class="eye-icon-large fade-effect dim popup-with-zoom-anim" href="#popup-box"><img src="img/eye-icon-large.png"/></a>
 					</div>
 					<div class="item">
 						<h1>barrel</h1>
 						<a class="big-button fade-effect" href="#">buy this floor</a><br/>
-						<a class="camera-icon fade-effect dim popup-with-zoom-anim" href="#popup-box"><img src="img/camera-icon.png"/></a>
+						<a class="eye-icon-large fade-effect dim popup-with-zoom-anim" href="#popup-box"><img src="img/eye-icon-large.png"/></a>
 					</div>
 					<div class="item">
 						<h1>chocolate</h1>
 						<a class="big-button fade-effect" href="#">buy this floor</a><br/>
-						<a class="camera-icon fade-effect dim popup-with-zoom-anim" href="#popup-box"><img src="img/camera-icon.png"/></a>
+						<a class="eye-icon-large fade-effect dim popup-with-zoom-anim" href="#popup-box"><img src="img/eye-icon-large.png"/></a>
 					</div>
 					<div class="item">
 						<h1>truffle</h1>
 						<a class="big-button fade-effect" href="#">buy this floor</a><br/>
-						<a class="camera-icon fade-effect dim popup-with-zoom-anim" href="#popup-box"><img src="img/camera-icon.png"/></a>
+						<a class="eye-icon-large fade-effect dim popup-with-zoom-anim" href="#popup-box"><img src="img/eye-icon-large.png"/></a>
 					</div>
 				</div>
 				<img class="left-arrow fade-effect dim" src="img/left-arrow-large.png"/>
@@ -138,18 +138,18 @@
 	<script type="text/javascript">
 		var index1 = 1;
 		var index2 = 1;
-		var index3 = 1;
+		var index3 = 3; //matt wants to start in the office first
 		var currentSlide=1;
 		var text = [["suede","drift","storm","stealth","cognac","barrel","chocolate","truffle"],
 					 ["plank","herringbone 5\"","herringbone 7\""],
-					 ["living room","dining room","office"]];
+					 ["living room","kitchen","office"]];
 		var slide1 = $(".owl-single.one").owlCarousel({navigation : false,slideSpeed : 1000,paginationSpeed : 1000,navigationText : ["",""],pagination: false,autoPlay: false,mouseDrag: false,singleItem : true,itemsScaleUp:true,transitionStyle : "fade",afterMove: afterMove });
 		
 		$('.colors-page > .left-arrow').click(function(){  slide1.trigger('owl.prev'); });
 		$('.colors-page > .right-arrow').click(function(){ slide1.trigger('owl.next'); });
 		$('.sub-nav .left-arrow').click(function(){ prevIndex(2,false); updateBackground(); });
 		$('.sub-nav .right-arrow').click(function(){ nextIndex(2,false); updateBackground(); });
-		$('.camera-icon').click(function(){ index1=currentSlide+1; updateBackground(); });
+		$('.eye-icon-large').click(function(){ index1=currentSlide+1; updateBackground(); });
 		$('.zoom-anim-dialog > img').click(function(){ nextIndex(2,false); updateBackground(); });
 		
 		$('#text1').click(function(){ nextIndex(0,true); updateBackground(); });
