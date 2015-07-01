@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Revival Hardwoods</title>
-	<meta name="description" content="revival hardwoods">
+	<title>Revival Hardwood Flooring</title>
+	<meta name="description" content="revival hardwood Flooring">
 	<meta name="author" content="jacob debenedetto">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href="./rh/css/normalize.css">
@@ -31,7 +31,7 @@
 						<div>
 							<li class="fade-effect navi">COLORS
 								<ul class="fade-effect">
-                                    <span>select an item for more details</span>
+                                    <span>select a color for more details</span>
 									<div>
 										<li class="fade-effect"><a href="./rh/colors.html?=01"><img src="./rh/img/thumbnails/010101.jpg"/><span class="fade-effect">suede</span></a></li>
 										<li class="fade-effect"><a href="./rh/colors.html?=02"><img src="./rh/img/thumbnails/020101.jpg"/><span class="fade-effect">drift</span></a></li>
@@ -48,7 +48,7 @@
 						<div>
 							<li class="fade-effect navi">PATTERNS
 								<ul class="fade-effect">
-                                    <span>select an item for more details</span>
+                                    <span>select a pattern for more details</span>
 									<div>
 										<li class="one-third fade-effect"><a href="./rh/patterns.html?=01"><img src="./rh/img/thumbnails/normal.jpg"/><span class="fade-effect">plank</span></a></li>
 										<li class="one-third fade-effect"><a href="./rh/patterns.html?=02"><img src="./rh/img/thumbnails/herringbone.jpg"/><span class="fade-effect">herringbone 5"</span></a></li>
@@ -57,9 +57,11 @@
 								</ul>
 							</li>	
 						</div>
+                        <a href="./rh/species.html" class="fade-effect"><li>SPECIES</li></a>
 						<a href="./rh/trim.html" class="fade-effect"><li>TRIM</li></a>
-						<a href="./rh/wood.html" class="fade-effect"><li>RESOURCES</li></a>
-						<a href="./rh/why-us.html" class="fade-effect"><li>WHY US</li></a>
+                        <a href="./rh/why-us.html" class="fade-effect"><li>WHY US</li></a>
+						<a href="./rh/resources.html" class="fade-effect"><li>RESOURCES</li></a>
+						
 						<a href="#" class="dim fade-effect"><img src="./rh/img/shopping-cart.png"/></li></a>
 					</ul>
 				</div>
@@ -143,8 +145,8 @@
 						<div class="owl-single one" class="owl-carousel">
 							<div class="item">
 								<h1>LUXURY FLOORS</h1>
-								<h2>DIRECT TO YOUR DOOR</h2>
-								<p>Welcome, we are one of the world's premier producers of Hardwood Flooring and now we can deliver a floor right to your home with no middlemen.</p>
+								<h2>DIRECT TO YOUR HOME</h2>
+								<p>Welcome, we are one of the world’s premier producers of hardwood flooring and now we can deliver a floor right to your home without a middle man. Our floors are perfect for a new build, remodel or a restoration project.</p>
 							</div>
 							<div class="item">
 								<h1>PROVEN & TRUSTED</h1>
@@ -162,10 +164,16 @@
 				<div id="popup-box" class="zoom-anim-dialog mfp-hide noselect">
 					<img class="fade-effect" src="./rh/img/backgrounds/010101.jpg"/>
 					<div class="sub-nav">
-						<div class="left"><span id="text1">storm</span><span id="text2">plank</span><span id="text3">pooltable room</span></div>
-						<div class="right"><a class="button-small" href="#">buy this floor</a></div>
+                        <img class="instructions" src="./rh/img/click-to-modify.png"/>
+						<div class="top"><span id="text1">storm</span><span id="text2">plank</span><span id="text3">pooltable room</span></div>
 						<img class="left-arrow" src="./rh/img/left-arrow.png"/>
 						<img class="right-arrow" src="./rh/img/right-arrow.png"/>
+                        <div class="bottom">
+                            <a class="item" href="#" onclick="location.href='./rh/colors.html?='+index1;">view color</a>
+                            <a class="item" href="#" onclick="location.href='./rh/patterns.html?='+index2;">view pattern</a>
+                            <a class="item" href="#">get a sample</a>
+                            <a class="item" href="#">buy this floor</a>
+                        </div>
 					</div>
 				</div>
 			</div>
@@ -174,7 +182,7 @@
 		<!--footer-->
 		<div class="footer">
 			<div class="wrapper">
-				<span id="date" style="float: left; color: #999999;">Copyright Revival Hardwoods. All Rights Reserved.</span>
+				<span id="date" style="float: left; color: #999999;">Copyright Revival Hardwood Floorign. All Rights Reserved.</span>
 			</div>
 		</div>
 	</div>
@@ -194,7 +202,7 @@
         var currentSlide=1;
 		var text = [["suede","drift","storm","stealth","cognac","barrel","chocolate","truffle"],
 					 ["plank","herringbone 5\"","herringbone 7\""],
-					 ["living room","kitchen","office"]];
+					 ["living room","dining room","office"]];
 		
 		$('.colors-page > .left-arrow').click(function(){  slide1.trigger('owl.prev'); });
 		$('.colors-page > .right-arrow').click(function(){ slide1.trigger('owl.next'); });
@@ -207,6 +215,8 @@
             changeBG();
             $.magnificPopup.proto.close.call(this);
         }; 
+        
+        /*$('#popup-box').css("maxHeight",$(window).height());*/
         
 		$('#text1').click(function(){ nextIndex(0,true); updateBackground(); });
 		$('#text2').click(function(){ nextIndex(1,true); updateBackground(); });
@@ -302,9 +312,9 @@
 			//change background height to device height
 			$('.header').css("height",$(window).height());
 			//footer
-			document.getElementById('date').innerHTML="@ "+(new Date().getFullYear())+" Copyright Revival Hardwoods. All Rights Reserved.";
+			document.getElementById('date').innerHTML="@ "+(new Date().getFullYear())+" Copyright Revival Hardwood Flooring. All Rights Reserved.";
 		});
 		
 	</script>
-</body>
+
 </html>
