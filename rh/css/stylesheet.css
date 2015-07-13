@@ -34,7 +34,7 @@ em { color: #FFF; }
 .nav ul { margin: 0px; color: #cad6da; font-size: 24px; list-style: none; }
 .nav ul > div > li { display: inline-block; margin: 0px 0px 0px 0px; padding: 0 6px; cursor: pointer; }
 .nav ul > div, .nav ul > a { display: inline-block; color: #352819; text-decoration: none; /*font-family: 'avenir-next-bc';*/ }
-.nav ul > div:hover > li, .nav ul a:hover, a.active li { color: #b38654; list-style: none;  }
+.nav ul > div:hover > li, .nav ul a:hover, a.active li, .nav ul > div > li.active { color: #b38654; list-style: none;  }
 .nav ul > a { margin: 0px; padding: 0 6px; }
 /*drop-down*/
 .nav ul > div > li > ul { display: block; position: absolute; top: 52px; /*left: 100%;*/ left: 140%; right: -100%; text-align: center; padding: 0px; }
