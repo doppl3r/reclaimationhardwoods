@@ -4,8 +4,11 @@
 
 #section2 { background-color: #d5cec4; min-height: 640px; }
 #section2 p { font-family: 'gearedslab'; margin: 56px 0px 16px 0px; font-weight: normal; font-size: 20px; color: #69563c; }
-.subnav { padding: 80px 10% 0px 10%; }
-.carousel-inner {  }
+.subnav { padding: 80px 10% 0px 10%; position: relative; }
+.button-wrapper { position: relative; z-index: 999; top: 100px; }
+.left-button { position: absolute; left: 0%; cursor: pointer; width: 32px; }
+.right-button { position: absolute; right: 0%; cursor: pointer; width: 32px; }
+.carousel-inner { position: relative; }
 .carousel-inner .item { }
 .carousel-inner .item .active { color: #70614d; }
 .carousel-inner .item .left, .carousel-inner .item .right {
@@ -18,7 +21,7 @@
 .carousel-inner .item img { width: 100%; }
 .carousel { text-align: left; }
 .carousel-control.right, .carousel-control.left { background-image: none; }
-#section2 .carousel-indicators { padding-left: 9%; z-index: 0; left: auto; margin-left: 4px; text-align: left; }
+#section2 .carousel-indicators { width: 100%; text-align: center; z-index: 0; left: auto; margin-left: 4px; }
 .carousel-indicators .active { width: 16px; height: 16px;  }
 .carousel-indicators li { text-align: left; background-color: #a69b8b; width: 16px; height: 16px; border: none; margin: 0px;}
 
