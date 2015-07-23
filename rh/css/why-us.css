@@ -5,7 +5,7 @@
 #section2 { background-color: #d5cec4; min-height: 640px; }
 #section2 p { font-family: 'gearedslab'; margin: 56px 0px 16px 0px; font-weight: normal; font-size: 20px; color: #69563c; }
 .subnav { padding: 80px 10% 0px 10%; position: relative; }
-.button-wrapper { position: relative; z-index: 999; top: 100px; }
+.button-wrapper { position: relative; z-index: 1; top: 100px; }
 .left-button { position: absolute; left: 0%; cursor: pointer; width: 32px; }
 .right-button { position: absolute; right: 0%; cursor: pointer; width: 32px; }
 .carousel-inner { position: relative; }
