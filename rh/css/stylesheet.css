@@ -39,6 +39,7 @@ em { color: #FFF; }
 .nav a.home-hint { position: absolute; font-size: 21px; opacity: 0; left: 48px; top: 32px; height: 24px; }
 .nav:hover a.home-hint { opacity: 1; }
 /*drop-down*/
+.nav ul > div > li > a { text-decoration: none; color: inherit; }
 .nav ul > div > li > ul { display: block; position: absolute; top: 52px; /*left: 100%;*/ left: 140%; right: -100%; text-align: center; padding: 0px; }
 .nav ul > div > li > ul > span { position:absolute; top: 0; left:0; right:0; color: #352819; text-transform: uppercase; }
 .nav ul > div > li:hover > ul,.nav ul a li:active > ul { left: 0%; right: 0%; display: block; position: fixed; top: 84px;  }
@@ -70,11 +71,11 @@ em { color: #FFF; }
 .header .wrapper {  padding-top: 160px; position: fixed; right: 10%; }
 .header .wrapper.colors-page { right: initial; }
 
-.header .left { position: relative; text-align: center; margin: 0px 2% 0px 0px;  padding: 5% 5% 4px; width: 58%;  /*min-height: 406px;*/ opacity: 1; float: right; background-color: rgba(220,216,209,0.90); }
+.header .left { position: relative; text-align: center; margin: 0px 2% 0px 0px;  padding: 5% 0% 4px; width: 58%;  /*min-height: 406px;*/ opacity: 1; float: right; background-color: rgba(220,216,209,0.90); }
 .header .left h1 { font-size: 60px; margin: 0px 0px 0px 0px; }
 .header .left h2 { font-size: 36px; }
 .header .left img { margin: 0px 0px 24px 0px; }
-.header .left p { font-size: 20px; }
+.header .left p { font-size: 20px; margin: 0 10%; }
 .header .left .owl-theme .owl-controls { margin-top: 24px; }
 .header .left .toggle-button { position: absolute; top:4px; right:4px; cursor: pointer; }
 
@@ -292,9 +293,15 @@ em { color: #FFF; }
     .nav ul > a { display: block; line-height: 48px; }
     .nav ul a { margin: 0px 0px 0px 0px; }
     .nav ul > div > li { display: none; padding: 10px 0px; margin: 0px; line-height: 18px; overflow: hidden;}
+    .nav:hover ul > div { display: block; }
     .nav:hover ul > div > li { display: inline-block; padding: 0px; }
-    .nav:hover ul > div > li.navi { display: inline-block; margin: 0px 8px; padding: 8px 6px 6px; border: 1px solid #352819; }
-    .nav:hover ul { display: block; float: right; margin: 0px -40px 0px 0px; opacity: 1; }
+    
+    /*extra nav disabled*/
+    .nav:hover ul > div > li.navi { display: block; margin: 0px 8px; padding: 14px 24px; }
+    .nav ul > div > li:hover > ul,.nav ul a li:active > ul { display: none !important;  }
+    .nav ul > div > li > ul > span { display: none; }
+    
+    .nav:hover ul { display: block; float: right; margin: 0px -24px 0px 0px; opacity: 1; }
     .nav .right { height: 92px; }
     .nav:hover .right { height: auto; }
     .nav:hover .button { opacity: 0.15; }
