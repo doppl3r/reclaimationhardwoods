@@ -183,7 +183,7 @@ em { color: #FFF; }
 
 /*Owl Carousel Override*/
 .owl-single, .owl-carousel .owl-wrapper-outer,
-.owl-carousel .owl-wrapper, .owl-carousel .owl-item, .header .wrapper, .header .item {  position: relative; }
+.owl-carousel .owl-wrapper, .owl-carousel .owl-item, .header .wrapper, .header .item {  position: relative; right: 0; }
 .owl-carousel .item { width: auto !important; }
 
 
@@ -296,7 +296,8 @@ em { color: #FFF; }
     
     /*extra nav disabled*/
     .nav:hover ul > div > li.navi { display: block; margin: 0px 8px; padding: 14px 24px; }
-    .nav ul > div > li:hover > ul,.nav ul a li:active > ul { display: none !important;  }
+    .nav ul > div > li:hover > ul,.nav ul a li:active > ul,
+    .nav ul > div > li > ul,.nav ul a li > ul { display: none !important; opacity: 0;  }
     .nav ul > div > li > ul > span { display: none; }
     
     .nav:hover ul { display: block; float: right; margin: 0px -24px 0px 0px; opacity: 1; }
