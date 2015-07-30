@@ -228,7 +228,7 @@ em { color: #FFF; }
 .zoom-anim-dialog ul { padding-left: 18px; }
 
 .wrapper.colors-page { text-align: center; position: relative; max-width: 960px; }
-.colors-page .big-button { display: inline-block; opacity: 1; background-color: #352819; color: #fff; font-size: 32px; text-transform: uppercase; padding: 2.0% 5%; }
+.colors-page .big-button { display: inline-block; opacity: 1; background-color: #352819; color: #fff; font-size: 32px; text-transform: uppercase; padding: 2.0% 5%; margin-top: 12px; }
 .colors-page .big-button:hover { opacity: 0.75; color: #fff; text-decoration: none; }
 .colors-page h1 { font-size: 80px; margin: 64px 0px 12px; color: #fff; text-transform: uppercase;}
 .colors-page .eye-icon-large { margin-top: 24px; display: block; }
