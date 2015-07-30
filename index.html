@@ -201,8 +201,13 @@ window.location.href=”login.jsp?backurl=”+window.location.href;
 		var index2 = 2; //image pattern
 		var index3 = 3; //image room
 		
-		var slide1 = $(".owl-single.one").owlCarousel({ items: 1, navigation : false,slideSpeed : 300,paginationSpeed : 400,navigationText : ["",""],pagination: true,autoPlay: 8500,mouseDrag: true,singleItem : true,itemsScaleUp:true,transitionStyle : "fade",rewindNav:false});
-		var slide2 = $(".owl-single.two").owlCarousel({navigation : false,slideSpeed : 300,paginationSpeed : 400,navigationText : ["",""],pagination: false,autoPlay: false,mouseDrag: false,singleItem : true,itemsScaleUp:true,transitionStyle : "fade"});
+        $( window ).load(function() {
+            var slide1 = $(".owl-single.one").owlCarousel({ items: 1, navigation : false,slideSpeed : 300,paginationSpeed : 400,navigationText : ["",""],pagination: true,autoPlay: 8500,mouseDrag: true,singleItem : true,itemsScaleUp:true,transitionStyle : "fade",rewindNav:false });
+            var slide2 = $(".owl-single.two").owlCarousel({navigation : false,slideSpeed : 300,paginationSpeed : 400,navigationText : ["",""],pagination: false,autoPlay: false,mouseDrag: false,singleItem : true,itemsScaleUp:true,transitionStyle : "fade"});
+            slide1.resize();
+            slide2.resize();
+        });
+		
 		
         var currentSlide=1;
 		var text = [["suede","drift","storm","stealth","cognac","barrel","chocolate","truffle"],

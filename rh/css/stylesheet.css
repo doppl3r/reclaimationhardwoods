@@ -183,10 +183,8 @@ em { color: #FFF; }
 
 /*Owl Carousel Override*/
 .owl-single, .owl-carousel .owl-wrapper-outer,
-.owl-carousel .owl-wrapper, .owl-carousel .owl-item,
-
-
-/*.header .wrapper, .header .item {  position: relative; }*/
+.owl-carousel .owl-wrapper, .owl-carousel .owl-item, .header .wrapper, .header .item {  position: relative; }
+.owl-carousel .item { width: auto !important; }
 
 
  .header .item { overflow-x: hidden; overflow-y:hidden; }
