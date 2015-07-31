@@ -74,7 +74,7 @@
 		<div class="header fade-effect" style="background-image: url('./rh/img/backgrounds/030203.jpg');">
 			<div class="wrapper">
 				<div class="cont">
-                    <a class="eye-icon-large fade-effect dim popup-with-zoom-anim" href="#popup-box"><img src="./rh/img/eye-icon-large.png"/></a>
+                    <a class="eye-icon-large fade-effect dim popup-with-zoom-anim home" href="#popup-box"><img src="./rh/img/eye-icon-large.png"/></a>
 					<div class="right">
 						<div class="owl-single two" class="owl-carousel">
 							<div class="item">
@@ -268,12 +268,7 @@ window.location.href=”login.jsp?backurl=”+window.location.href;
 			$('#text2').text(text[1][index2-1]);
 			$('#text3').text(text[2][index3-1]);
 		}
-        
-        function checkAnimations() {
-            $( window ).resize(function() { $('.header').css("height",$(window).height()); });
-            //if ($(window).scrollTop() <= 0){$( ".bottom-nav" ).css( "top", "32px" );	$('.header').css("height",$(window).height());}
-            //else{	$( ".bottom-nav" ).css( "top", "0%" );}
-        }
+        $( window ).resize(function() { $('.header').css("height",$(window).height());  });
         //change the screenheight after scrolling to the top (desktop feature)
         function setScrollTop(y){ $('body').scrollTop(y); checkAnimations(); }
         
