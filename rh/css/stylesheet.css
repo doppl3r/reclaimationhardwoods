@@ -255,7 +255,8 @@ em { color: #FFF; }
 .sub-nav .right-arrow { position: absolute; top: 42px; right: 12px; cursor: pointer; }
 
 @media(max-width:1024px){
-	.header .wrapper { padding-top: 160px; clear: both; position: relative; max-width: 800px; right: 0; }
+	.header .wrapper { padding-top: 108px; clear: both; position: relative; max-width: 800px; right: 0; }
+    .nav { top: 0; }
 	.nav .left { float: left; line-height: 92px; position: relative; left: initial; }
 	.nav .right { float: right; line-height: 92px; position: relative; right: initial; }
     .bottom-nav .wrapper { padding: 0px 24px; }
@@ -275,7 +276,7 @@ em { color: #FFF; }
     .mfp-container { padding: 0 10%; }
   
 }
-@media(max-width:640px){
+@media(max-width:639px){
     .cont { position: relative; overflow: hidden; }
     .nav { top: 0; z-index: 1044; }
     .nav .button { display: block; margin: 30px 0px 30px auto; } 

@@ -208,7 +208,8 @@ window.location.href=”login.jsp?backurl=”+window.location.href;
         $( window ).load(function() {
             slide1.resize();
             slide2.resize();
-            if ($(window).width() < 640) {  $('.buy').trigger('click');  }
+            if ($(window).width() <= 640) {  $('.buy').trigger('click');  }
+            checkAnimations();
         });
 		
         var currentSlide=1;
@@ -268,7 +269,7 @@ window.location.href=”login.jsp?backurl=”+window.location.href;
 			$('#text2').text(text[1][index2-1]);
 			$('#text3').text(text[2][index3-1]);
 		}
-        $( window ).resize(function() { $('.header').css("height",$(window).height());  });
+        
         //change the screenheight after scrolling to the top (desktop feature)
         function setScrollTop(y){ $('body').scrollTop(y); checkAnimations(); }
         
@@ -289,6 +290,10 @@ window.location.href=”login.jsp?backurl=”+window.location.href;
         
         function nextMenu() { slide2.trigger("owl.next");	}
 		function prevMenu() { slide2.trigger("owl.prev");	}
+        
+        function checkAnimations(){
+            $( window ).resize(function() { $('.header').css("height",$(window).height());  });
+        }
         
 		$(document).ready(function() {
 			$( window ).scroll(function() {	checkAnimations(); });
