@@ -277,7 +277,7 @@ em { color: #FFF; }
 }
 @media(max-width:640px){
     .cont { position: relative; overflow: hidden; }
-    .nav { top: 0; }
+    .nav { top: 0; z-index: 1044; }
     .nav .button { display: block; margin: 30px 0px 30px auto; } 
     .nav .logo { height: 48px; }
     .nav a.home-hint { left: 30px; }
