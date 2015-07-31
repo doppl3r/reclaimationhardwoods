@@ -156,10 +156,12 @@
 							</div>
 							<div class="item">
 								<h1>DESIGN A FLOOR</h1>
-								<img src="./rh/img/hand.png"/>
+								<img class="hand-graphic" src="./rh/img/hand.png"/>
 								<p>Use our design tool to see how our floors look in various colors, patterns, and settings then let us provide a beautiful hardwood floor for your home or office.</p>
-							</div>
+							    <img class="hand-vertical" src="./rh/img/hand.png"/>
+                            </div>
 						</div>
+                        <a href="#popup-box" class="room-vis popup-with-zoom-anim">Design A Floor</a>
 					</div>
 				</div>
                 <!--popup box-->
@@ -167,7 +169,7 @@
 					<img class="fade-effect" src="./rh/img/backgrounds/010101.jpg"/>
 					<div class="sub-nav">
                         <img class="instructions" src="./rh/img/click-to-modify.png"/>
-						<div class="top"><span id="text1">storm</span><span id="text2">plank</span><span id="text3">pooltable room</span></div>
+						<div class="top"><span id="text1">storm</span><span id="text2">plank</span><span id="text3">office</span></div>
 						<img class="left-arrow" src="./rh/img/left-arrow.png"/>
 						<img class="right-arrow" src="./rh/img/right-arrow.png"/>
                         <div class="bottom">
@@ -208,7 +210,7 @@ window.location.href=”login.jsp?backurl=”+window.location.href;
         $( window ).load(function() {
             slide1.resize();
             slide2.resize();
-            if ($(window).width() <= 640) {  $('.buy').trigger('click');  }
+            if ($(window).width() <= 640) {  }
             checkAnimations();
         });
 		

@@ -78,6 +78,8 @@ em { color: #FFF; }
 .header .left p { font-size: 20px; margin: 0 10%; }
 .header .left .owl-theme .owl-controls { margin-top: 24px; }
 .header .left .toggle-button { position: absolute; top:4px; right:4px; cursor: pointer; }
+.header .left .room-vis { display: none; background-color: #352819; color: #fff; text-decoration: none; text-transform: uppercase; font-size: 36px; margin: 0 0 -4px; padding: 12px 0px 6px; }
+.hand-vertical { display: none; }
 
 .header .right { position: relative; width: 32%; float: right; text-align: center; }
 .header .right .top { display: table; width: 100%; clear: both; padding: 8px 8px; background-color: rgba(220,216,209,0.90);}
@@ -319,7 +321,11 @@ em { color: #FFF; }
     .nav .one-third { width: 12.5%; }
 
     .header .wrapper { padding-top: 104px; }
-    .header .left { width: 100%; margin: 6px 0px 0px; top: 0; position: absolute; display: none; }
+    .header .left { width: 100%; margin: 6px 0px 0px; top: 0; position: absolute; }
+    .header .left .room-vis { display: block; }
+    .header .left h1 { font-size: 36px; }
+    .header .left h2 { font-size: 28px; }
+    .header .left .toggle-button { opacity: 0; }
     .header .right { width: 100%; left: 100%; }
     .header .right .top img { max-width: 64px; }
     .header .right .eye { }
@@ -335,12 +341,15 @@ em { color: #FFF; }
     .trim.body .right { display: block; width: 100%; text-align: center; padding: 0 0 12px; }
     .trim.body .right .specs span img { right: initial; margin: 0 auto; display: block; left: 15%; }
     .trim.body .right .specs:hover span img {  width: 70%;  }
-
+    .trim.body h1, .trim.body h2 { text-align: center; }
+    
     .footer { text-align: center; }
     .footer span { float: none; display: block; }
     /*.logo { display: none; }
     .logo-small { display: inline-block;  }*/
     .up-button { position: fixed; bottom: 0px; right: initial; left: 12px; }
+    .hand-graphic { display: none; }
+    .hand-vertical { display: inline-block; -ms-transform: rotate(90deg); -webkit-transform: rotate(90deg); transform: rotate(90deg); margin-top: 36px !important; }
 }
 @media(max-width:480px){
   .header .wrapper {  }
