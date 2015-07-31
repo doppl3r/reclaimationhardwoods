@@ -108,6 +108,7 @@ em { color: #FFF; }
 .header .right .buy:hover { opacity: .5; }
 .header .right .eye { position: absolute; left: -32px; top: -8px; margin-top: 8px; opacity: 0; width: 24px; }
 .header .right .eye:hover { cursor: pointer; }
+.header .eye-icon-large { margin-top: 20%; display: block; position: absolute; left: 0; right: 0; text-align: center; display: none;  }
 
 .trim.body { background: url('') fixed center center; }
 .trim.body .wrapper { padding: 160px 12px; max-width: 720px; }
@@ -127,8 +128,8 @@ em { color: #FFF; }
 .trim.body .right { padding-left: 24px; vertical-align: top; text-align: right; font-family: 'gearedslab'; }
 .trim.body .right .specs { position: relative; font-size: 18px; display: block; text-decoration: none; color: #352819; cursor: pointer; }
 .trim.body .right .specs span img { width: 0px; position: absolute; top: 0; right: 0; background-color: rgba(220,216,209,0.5); box-shadow: 0px 3px 2px rgba(0,0,0,0.15); z-index: 1; }
-.trim.body .right .specs span:hover img { width: 100%; }
-.trim.body .right .specs span:active img { display: none; }
+.trim.body .right .specs span:hover img, .trim.body .right .specs span:active img { width: 100%; }
+/*.trim.body .right .specs span:active img { display: none; }*/
 .trim.body .right .specs span { padding: 6px 0; }
 .trim.body .bottom-item { margin: 96px 0px; position: relative; }
 .trim.body .bottom-item img { max-width: 100%; }
@@ -275,6 +276,7 @@ em { color: #FFF; }
   
 }
 @media(max-width:640px){
+    .cont { position: relative; overflow: hidden; }
     .nav { top: 0; }
     .nav .button { display: block; margin: 30px 0px 30px auto; } 
     .nav .logo { height: 48px; }
@@ -316,10 +318,11 @@ em { color: #FFF; }
     .nav .one-third { width: 12.5%; }
 
     .header .wrapper { padding-top: 104px; }
-    .header .left { width: 100%; margin: 6px 0px 0px; }
-    .header .right { width: 100%; }
+    .header .left { width: 100%; margin: 6px 0px 0px; top: 0; position: absolute; opacity: 0; }
+    .header .right { width: 100%; left: 100%; }
     .header .right .top img { max-width: 64px; }
-    .header .right .eye { top: auto; left: auto; right: 0; }
+    .header .right .eye { }
+    .header .eye-icon-large { display: block; }
     .sub-nav { text-align:center; }
     .sub-nav a { display: inline-block; }
     .sub-nav .bottom .item { padding: 4px; min-width: initial; width: 50%; border: 1px solid #e1ded9; }
